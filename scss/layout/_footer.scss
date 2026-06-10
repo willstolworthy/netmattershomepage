@@ -17,8 +17,22 @@ footer {
             display: flex;
         }
 
-        socials {
+        .socials {
             display: flex;
+
+            @media (min-width: 992px) {
+                flex: 0 0 400px;
+            }
+        }
+
+        .socials-menu {
+            @media (min-width: 992px) {
+                width: 320px;
+            }
+
+            img {
+                width: 100%;
+            }
         }
 
         .footer-menu {
@@ -37,24 +51,16 @@ footer {
                 margin-bottom: 40px;
             }
 
-            &.socials {
-                @media (min-width: 992px) {
-                    flex: 0 0 300px;
-                }
-            }
-
             h4 {
                 text-transform:  uppercase;
                 font-size: 1rem;
                 font-style: normal;
-                margin-bottom: 26px;
+                margin: 0 0 26px;
             }
 
             @include mixins.footer-link-style;
         }
     }
-
-
 
     .footer-bottom {
         display: flex;
