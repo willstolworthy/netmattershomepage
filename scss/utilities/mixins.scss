@@ -1,3 +1,9 @@
+@mixin social-hover($color) {
+    &:hover {
+        background-color: $color;
+    }
+}
+
 @mixin footer-link-style {
     a {
         color: white;
@@ -7,5 +13,11 @@
     ul {
         list-style-type: none;
         padding-left: 0;
+    }
+}
+
+@mixin link-hover-underline {
+    a:hover {
+        text-decoration: underline;
     }
 }
