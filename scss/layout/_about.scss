@@ -1,3 +1,31 @@
+@use '../utilities/variables.scss';
+
 .about {
-    background-color: $main-bg;
+    background-color: variables.$main-bg;
+    color: white;
+    padding-bottom: 50px;
+
+    .welcome,
+    .what-clients-think {
+        width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .icon-star-full {
+        font-size: 50px;
+    }
+
+    .icon-star-full:before {
+        content: "\e9d9";
+        color: #FFD200;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+    }
+
+    .quote-author {
+        color: variables.$quote-text;
+    }
 }

@@ -11,6 +11,31 @@
   line-height: 1;
 }
 
+.about {
+  background-color: #323544;
+  color: white;
+  padding-bottom: 50px;
+}
+.about .welcome,
+.about .what-clients-think {
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.about .icon-star-full {
+  font-size: 50px;
+}
+.about .icon-star-full:before {
+  content: "\e9d9";
+  color: #FFD200;
+}
+.about .quote {
+  font-size: 1.2rem;
+}
+.about .quote-author {
+  color: #a3a8ac;
+}
+
 body {
   margin: 0;
 }
@@ -43,6 +68,23 @@ body {
   }
 }
 
+.row {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.row a {
+  color: white;
+  text-decoration: none;
+}
+.row ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.row a:hover {
+  text-decoration: underline;
+}
+
 footer {
   background-color: #323544;
   color: #fff;
@@ -60,14 +102,6 @@ footer .footer-row {
   footer .footer-row {
     flex-direction: row;
   }
-}
-footer .footer-row .row {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-}
-footer .footer-row .row a:hover {
-  text-decoration: underline;
 }
 footer .footer-row .socials {
   display: flex;
@@ -194,7 +228,7 @@ footer .footer-row .footer-menu ul {
   list-style-type: none;
   padding-left: 0;
 }
-footer footer a:hover {
+footer .footer-row .footer-menu a:hover {
   text-decoration: underline;
 }
 footer .footer-bottom {
@@ -225,6 +259,14 @@ footer .footer-bottom {
 #client-banner .clients {
   height: 500px;
   width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #272936;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

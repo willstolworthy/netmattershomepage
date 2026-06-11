@@ -1,3 +1,5 @@
+@use '../utilities/mixins.scss' as mixins;
+
 body {
     margin: 0;
 }
@@ -26,3 +28,12 @@ body {
         width: 1200px;
     }
 }
+
+.row {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+
+            @include mixins.link-style;
+            @include mixins.link-hover-underline;
+        }

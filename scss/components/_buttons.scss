@@ -1,0 +1,9 @@
+@use '../utilities/variables';
+
+.btn {
+    display: inline-block;
+    background-color: variables.$btn-grey;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 20px;
+}

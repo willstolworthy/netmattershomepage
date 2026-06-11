@@ -18,13 +18,6 @@ footer {
             flex-direction: row;
         }
 
-        .row {
-            display: flex;
-            flex: 1;
-            flex-wrap: wrap;
-            @include mixins.link-hover-underline;
-        }
-
         .socials {
             display: flex;
             flex-direction: column;
@@ -66,7 +59,7 @@ footer {
             @media (min-width: 992px) {
                 width: 320px;
             }
-            @include mixins.footer-link-style;
+            @include mixins.link-style;
 
             .facebook,
             .linkedin,
@@ -136,13 +129,10 @@ footer {
                 font-weight: 400;
             }
 
-            @include mixins.footer-link-style;
+            @include mixins.link-style;
+            @include mixins.link-hover-underline;
         }
 
-    }
-
-    footer a:hover {
-        text-decoration: underline;
     }
 
     .footer-bottom {
@@ -152,7 +142,7 @@ footer {
         padding: 10px 0 10px;
 
         @include mixins.link-hover-underline;
-        @include mixins.footer-link-style;
+        @include mixins.link-style;
         background-color: variables.$dark-bg;
     }
     
