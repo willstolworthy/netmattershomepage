@@ -1,0 +1,9 @@
+#client-banner {
+    display: flex;
+    flex-direction: row;
+
+    .clients {
+        height: 500px;
+        width: 100%;
+    }
+}
