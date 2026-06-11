@@ -1,9 +1,26 @@
 @use '../utilities/variables';
+@use '../utilities/mixins';
 
 .btn {
     display: inline-block;
-    background-color: variables.$btn-grey;
+    font-size: 1.25rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
     border-radius: 5px;
     padding: 10px 25px;
-    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-grey {
+    @include mixins.btn-variant(variables.$btn-grey, variables.$btn-grey-hover);
+}
+
+.btn-blue {
+    @include mixins.btn-variant(variables.$btn-blue, variables.$btn-blue-hover);
+}
+
+.btn-green {
+    @include mixins.btn-variant(variables.$btn-green, variables.$btn-green-hover);
 }

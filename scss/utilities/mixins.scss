@@ -6,9 +6,17 @@
     }
 }
 
+@mixin btn-variant($color, $hover-color) {
+    background-color: $color;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
 @mixin link-style {
     a {
-        color: white;
+        color: variables.$white;
         text-decoration: none;
     }
 
@@ -19,29 +27,26 @@
 }
 
 @mixin link-hover-underline {
-    a:hover {
+    a:not(.btn):hover {
         text-decoration: underline;
     }
 }
 
 @mixin mq($break) {
     @if $break == "small" {
-        @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+        @media (min-width: variables.$breakpoint-small) {
             @content;
         }
-    }
-    @if $break == "medium" {
-        @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+    } @else if $break == "medium" {
+        @media (min-width: variables.$breakpoint-medium) {
             @content;
         }
-    }
-    @if $break == "large" {
-        @media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+    } @else if $break == "large" {
+        @media (min-width: variables.$breakpoint-large) {
             @content;
         }
-    }
-    @if $break == "xlarge" {
-        @media (min-width: $breakpoint-xlarge) {
+    } @else if $break == "xlarge" {
+        @media (min-width: variables.$breakpoint-xlarge) {
             @content;
         }
     }

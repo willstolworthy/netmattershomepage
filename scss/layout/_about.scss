@@ -1,24 +1,22 @@
-@use '../utilities/variables.scss';
+@use '../utilities/variables';
 
 .about {
     background-color: variables.$main-bg;
-    color: white;
+    color: variables.$white;
     padding-bottom: 50px;
 
     .welcome,
     .what-clients-think {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 50%;
         padding-left: 15px;
         padding-right: 15px;
     }
 
     .icon-star-full {
-        font-size: 50px;
-    }
-
-    .icon-star-full:before {
-        content: "\e9d9";
-        color: #FFD200;
+        font-size: 3.125rem;
     }
 
     .quote {
@@ -27,5 +25,14 @@
 
     .quote-author {
         color: variables.$quote-text;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        margin: 0 0 20px;
+        line-height: 2rem;
     }
 }

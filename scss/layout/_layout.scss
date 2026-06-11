@@ -1,4 +1,4 @@
-@use '../utilities/mixins.scss' as mixins;
+@use '../utilities/mixins';
 
 body {
     margin: 0;
@@ -16,24 +16,24 @@ body {
     padding-right: 15px;
     padding-left: 15px;
 
-    @media (min-width: 768px) {
+    @include mixins.mq("medium") {
         width: 750px;
     }
 
-    @media (min-width: 992px) {
+    @include mixins.mq("large") {
         width: 970px;
     }
 
-    @media (min-width: 1260px) {
+    @include mixins.mq("xlarge") {
         width: 1200px;
     }
 }
 
 .row {
-            display: flex;
-            flex: 1;
-            flex-wrap: wrap;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
 
-            @include mixins.link-style;
-            @include mixins.link-hover-underline;
-        }
+    @include mixins.link-style;
+    @include mixins.link-hover-underline;
+}

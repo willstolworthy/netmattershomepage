@@ -1,4 +1,6 @@
+@use '../utilities/variables';
+
 .basic {
-    background-color: white;
+    background-color: variables.$white;
     height: 300px;
 }

@@ -1,0 +1,23 @@
+@use '../utilities/variables';
+
+.icon-facebook:before {
+    content: "\ea90";
+}
+.icon-linkedin2:before {
+    content: "\eaca";
+}
+.icon-x:before {
+    content: "\e900";
+}
+.icon-instagram:before { 
+    content: "\ea92"; 
+}
+
+.icon-star-full:before {
+    content: "\e9d9";
+    color: variables.$star-gold;
+}
+
+.icon-arrow-right2:before {
+    content: "\ea3c";
+}
