@@ -46,6 +46,7 @@
   padding: 10px 25px;
   text-transform: uppercase;
   text-decoration: none;
+  color: #fff;
   margin-bottom: 15px;
 }
 @media (min-width: 768px) {
@@ -73,6 +74,55 @@
 }
 .btn-green:hover {
   background-color: #009b69;
+}
+
+.btn-purple {
+  background-color: #926fb1;
+}
+.btn-purple:hover {
+  background-color: #7e57a8;
+}
+
+.banner-bg {
+  background-image: linear-gradient(to right, black, transparent), url("../img/banner-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .banner-bg {
+    background-size: 100% auto;
+    background-position: left top;
+  }
+}
+.banner-bg {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .banner-overlay h1 {
+    font-size: 4rem;
+  }
+}
+
+.banner-overlay p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.banner-overlay {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .banner-overlay {
+    text-align: left;
+  }
 }
 
 .basic {
@@ -326,11 +376,52 @@ footer h4 {
 }
 
 .client-banner {
-  display: flex;
+  overflow: hidden;
+  padding: 30px 0 30px;
 }
 .client-banner .clients {
-  height: 500px;
-  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.client-banner .clients img {
+  height: 70px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.clients img {
+  padding: 0 20px;
+  filter: grayscale(100%);
+}
+.clients img:hover {
+  filter: grayscale(0%);
+}
+
+.headings {
+  overflow: hidden;
+}
+.headings a {
+  color: #333645;
+  text-decoration: none;
+}
+.headings a:hover {
+  text-decoration: underline;
+}
+
+.left {
+  float: left;
+  font-size: 2.25rem;
+}
+
+.right {
+  float: right;
+  font-size: 1.7rem;
+}
+
+.latest-news {
+  color: #333645;
 }
 
 /*# sourceMappingURL=style.css.map */

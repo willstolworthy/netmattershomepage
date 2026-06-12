@@ -37,6 +37,17 @@
     @include link-hover-underline;
 }
 
+@mixin link-style-dark {
+    a {
+        color: variables.$dark-text;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 @mixin mq($break) {
     @if $break == "small" {
         @media (min-width: variables.$breakpoint-small) {

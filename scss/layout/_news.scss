@@ -1,0 +1,21 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.headings {
+    overflow: hidden;
+    @include mixins.link-style-dark;
+}
+
+.left {
+    float: left;
+    font-size: 2.25rem;
+}
+
+.right {
+    float: right;
+    font-size: 1.7rem;
+}
+
+.latest-news {
+    color: variables.$dark-text;
+}
