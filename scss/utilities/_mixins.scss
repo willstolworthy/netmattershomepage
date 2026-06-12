@@ -32,6 +32,11 @@
     }
 }
 
+@mixin link-style-full {
+    @include link-style;
+    @include link-hover-underline;
+}
+
 @mixin mq($break) {
     @if $break == "small" {
         @media (min-width: variables.$breakpoint-small) {

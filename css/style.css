@@ -29,7 +29,7 @@
 
 .icon-star-full:before {
   content: "\e9d9";
-  color: #FFD200;
+  color: #FFA500;
 }
 
 .icon-arrow-right2:before {
@@ -46,12 +46,18 @@
   padding: 10px 25px;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .btn {
+    margin-bottom: 0;
+  }
 }
 
-.button-grey {
+.btn-grey {
   background-color: #272936;
 }
-.button-grey:hover {
+.btn-grey:hover {
   background-color: #121318;
 }
 
@@ -81,7 +87,6 @@ body {
 * {
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
-  font-style: normal;
 }
 
 .container {
@@ -133,15 +138,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .about .welcome,
+  .about .what-clients-think {
+    width: 50%;
+  }
 }
 .about .icon-star-full {
   font-size: 3.125rem;
 }
 .about .quote {
   font-size: 1.2rem;
+}
+.about .what-clients-think p {
+  font-style: italic;
 }
 .about .quote-author {
   color: #a3a8ac;
@@ -161,6 +175,11 @@ footer {
   position: relative;
   font-size: 0.8125rem;
   line-height: 1.375rem;
+}
+footer h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .footer-row {
@@ -184,10 +203,7 @@ footer {
   }
 }
 .socials h4 {
-  text-transform: uppercase;
-  font-size: 1rem;
   margin: 24px 0 26px;
-  font-weight: 400;
 }
 
 .nm-img {
@@ -276,10 +292,7 @@ footer {
   }
 }
 .footer-menu h4 {
-  text-transform: uppercase;
-  font-size: 1rem;
   margin: 0 0 26px;
-  font-weight: 400;
 }
 .footer-menu a {
   color: #fff;
@@ -300,9 +313,6 @@ footer {
   padding: 10px 0;
   background-color: #212330;
 }
-.footer-bottom a:not(.btn):hover {
-  text-decoration: underline;
-}
 .footer-bottom a {
   color: #fff;
   text-decoration: none;
@@ -311,11 +321,14 @@ footer {
   list-style-type: none;
   padding-left: 0;
 }
+.footer-bottom a:not(.btn):hover {
+  text-decoration: underline;
+}
 
-#client-banner {
+.client-banner {
   display: flex;
 }
-#client-banner .clients {
+.client-banner .clients {
   height: 500px;
   width: 100%;
 }

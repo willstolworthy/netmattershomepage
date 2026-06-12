@@ -8,6 +8,12 @@ footer {
     position: relative;
     font-size: .8125rem;
     line-height: 1.375rem;
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
 .footer-row {
@@ -29,10 +35,7 @@ footer {
     }
 
     h4 {
-        text-transform: uppercase;
-        font-size: 1rem;
         margin: 24px 0 26px;
-        font-weight: 400;
     }
 }
 
@@ -40,7 +43,7 @@ footer {
     width: 250px;
 
     @include mixins.mq("large") {
-        width: 320px;
+        width: variables.$footer-brand-width;
     }
 
     img {
@@ -58,7 +61,7 @@ footer {
     margin-bottom: 30px;
 
     @include mixins.mq("large") {
-        width: 320px;
+        width: variables.$footer-brand-width;
     }
 
     @include mixins.link-style;
@@ -102,14 +105,10 @@ footer {
     }
 
     h4 {
-        text-transform: uppercase;
-        font-size: 1rem;
         margin: 0 0 26px;
-        font-weight: 400;
     }
 
-    @include mixins.link-style;
-    @include mixins.link-hover-underline;
+    @include mixins.link-style-full;
 }
 
 .footer-bottom {
@@ -119,6 +118,5 @@ footer {
     padding: 10px 0;
     background-color: variables.$dark-bg;
 
-    @include mixins.link-hover-underline;
-    @include mixins.link-style;
+    @include mixins.link-style-full;
 }

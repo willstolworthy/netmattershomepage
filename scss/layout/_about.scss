@@ -1,4 +1,5 @@
 @use '../utilities/variables';
+@use '../utilities/mixins';
 
 .about {
     background-color: variables.$main-bg;
@@ -10,9 +11,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 50%;
+        width: 100%;
         padding-left: 15px;
         padding-right: 15px;
+
+        @include mixins.mq("medium") {
+            width: 50%;
+        }
     }
 
     .icon-star-full {
@@ -21,6 +26,10 @@
 
     .quote {
         font-size: 1.2rem;
+    }
+
+    .what-clients-think p {
+        font-style: italic;
     }
 
     .quote-author {

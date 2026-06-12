@@ -11,9 +11,14 @@
     padding: 10px 25px;
     text-transform: uppercase;
     text-decoration: none;
+    margin-bottom: 15px;
+
+    @include mixins.mq("medium") {
+        margin-bottom: 0;
+    }
 }
 
-.button-grey {
+.btn-grey {
     @include mixins.btn-variant(variables.$btn-grey, variables.$btn-grey-hover);
 }
 
