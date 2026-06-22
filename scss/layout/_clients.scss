@@ -1,3 +1,5 @@
+@use '../utilities/variables';
+
 .client-banner {
     overflow: hidden;
     padding: 30px 0 30px;
@@ -5,23 +7,42 @@
     .clients {
         display: flex;
         flex-wrap: nowrap;
-
-        img {
-            height: 70px;
-            width: auto;
-            max-width: 200px;
-            object-fit: contain;
-            flex-shrink: 0;
-        }
     }
 }
 
-
-.clients img {
+.client-item {
+    position: relative;
+    flex-shrink: 0;
     padding: 0 20px;
-    filter: grayscale(100%);
 
-    &:hover {
-        filter: grayscale(0%)
+    img {
+        height: 70px;
+        width: auto;
+        max-width: 200px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        display: block;
+    }
+
+    .client-label {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        background-color: variables.$dark-bg;
+        color: variables.$white;
+        text-align: center;
+        padding: 8px 0;
+        z-index: 10;
+    }
+
+    &:hover img {
+        filter: grayscale(0%);
+    }
+
+    &:hover .client-label {
+        display: block;
     }
 }

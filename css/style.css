@@ -389,20 +389,38 @@ footer h4 {
   display: flex;
   flex-wrap: nowrap;
 }
-.client-banner .clients img {
+
+.client-item {
+  position: relative;
+  flex-shrink: 0;
+  padding: 0 20px;
+}
+.client-item img {
   height: 70px;
   width: auto;
   max-width: 200px;
   object-fit: contain;
-  flex-shrink: 0;
-}
-
-.clients img {
-  padding: 0 20px;
   filter: grayscale(100%);
+  display: block;
 }
-.clients img:hover {
+.client-item .client-label {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background-color: #212330;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 10;
+}
+.client-item:hover img {
   filter: grayscale(0%);
+}
+.client-item:hover .client-label {
+  display: block;
 }
 
 .partner-banner {
