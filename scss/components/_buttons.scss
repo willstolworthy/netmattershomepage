@@ -34,3 +34,7 @@
 .btn-purple {
     @include mixins.btn-variant(variables.$btn-purple, variables.$btn-purple-hover);
 }
+
+.btn-yellow {
+    @include mixins.btn-variant(variables.$btn-yellow, variables.$btn-yellow-hover);
+}

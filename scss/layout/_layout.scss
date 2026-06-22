@@ -12,8 +12,8 @@ body {
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+//    padding-right: 15px;
+//    padding-left: 15px;
 
     @include mixins.mq("medium") {
         width: 750px;

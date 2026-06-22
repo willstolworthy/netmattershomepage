@@ -83,6 +83,13 @@
   background-color: #7e57a8;
 }
 
+.btn-yellow {
+  background-color: #f7B322;
+}
+.btn-yellow:hover {
+  background-color: #f7B322;
+}
+
 .banner-bg {
   background-image: linear-gradient(to right, black, transparent), url("../img/banner-bg.png");
   background-size: cover;
@@ -142,8 +149,6 @@ body {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 @media (min-width: 768px) {
   .container {
@@ -421,6 +426,67 @@ footer h4 {
 }
 
 .latest-news {
+  color: #333645;
+}
+
+.news1, .news2, .news3 {
+  flex: 1;
+  min-width: 0;
+  padding: 0 15px;
+  position: relative;
+}
+.news1 img, .news2 img, .news3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-link {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.news-text {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 0;
+  padding: 30px;
+}
+.news-text h3 {
+  min-height: 3em;
+  color: #67809f;
+  font-size: 1rem;
+  font-weight: 550;
+  margin-top: 0;
+}
+
+.news .btn {
+  font-size: 1rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.author {
+  display: flex;
+  min-width: 0;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: solid #ccc 1px;
+}
+.author .author-info {
+  padding-left: 20px;
+}
+
+.news-text p, .author {
+  color: #666;
+  font-size: 0.82rem;
+}
+
+.author b {
+  font-size: 1rem;
   color: #333645;
 }
 
