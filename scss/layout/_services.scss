@@ -41,6 +41,14 @@
 
 .service-card {
     padding: 30px;
+    position: relative;
+    top: 0;
+    transition: 0.5s ease;
+
+    &:hover {
+      top: -10px;
+      transition: 0.5s ease;
+    }
 }
 
 .service-card h2 {

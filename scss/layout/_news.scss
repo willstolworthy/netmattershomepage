@@ -43,6 +43,14 @@
         height: auto;
         display: block;
     }
+
+    top: 0;
+    transition: 0.5s ease;
+
+    &:hover {
+      top: -10px;
+      transition: 0.5s ease;
+    }
 }
 
 .news-link {

@@ -524,6 +524,14 @@ footer h4 {
   height: auto;
   display: block;
 }
+.news1, .news2, .news3 {
+  top: 0;
+  transition: 0.5s ease;
+}
+.news1:hover, .news2:hover, .news3:hover {
+  top: -10px;
+  transition: 0.5s ease;
+}
 
 .news-link {
   position: absolute;
@@ -653,6 +661,13 @@ footer h4 {
 
 .service-card {
   padding: 30px;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+}
+.service-card:hover {
+  top: -10px;
+  transition: 0.5s ease;
 }
 
 .service-card h2 {
