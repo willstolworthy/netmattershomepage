@@ -470,13 +470,24 @@ footer h4 {
 
 .latest-news {
   color: #333645;
+  padding: 10px 0 0;
+  margin-bottom: 50px;
 }
 
 .news1, .news2, .news3 {
   flex: 1;
   min-width: 0;
-  padding: 0 15px;
+  margin: 0 15px;
+}
+.news1:first-child, .news2:first-child, .news3:first-child {
+  margin-left: 0;
+}
+.news1:last-child, .news2:last-child, .news3:last-child {
+  margin-right: 0;
+}
+.news1, .news2, .news3 {
   position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 .news1 img, .news2 img, .news3 img {
   width: 100%;
@@ -530,6 +541,10 @@ footer h4 {
 
 .news3 .news-category {
   background-color: #4387f6;
+}
+
+.news .row {
+  align-items: flex-start;
 }
 
 .news .btn {

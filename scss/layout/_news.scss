@@ -18,13 +18,25 @@
 
 .latest-news {
     color: variables.$dark-text;
+    padding: 10px 0 0;
+    margin-bottom: 50px;
 }
 
 .news1, .news2, .news3 {
     flex: 1;
     min-width: 0;
-    padding: 0 15px;
+    margin: 0 15px;
+
+    &:first-child { 
+        margin-left: 0; 
+    }
+    
+    &:last-child { 
+        margin-right: 0; 
+    }
+
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 
     img {
         width: 100%;
@@ -80,6 +92,10 @@
 
 .news3 .news-category {
     background-color: variables.$btn-blue;
+}
+
+.news .row {
+    align-items: flex-start;
 }
 
 .news .btn {
