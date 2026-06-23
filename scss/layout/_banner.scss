@@ -2,9 +2,13 @@
 @use '../utilities/mixins';
 
 .banner-bg {
-    background-image: linear-gradient(to right, black, transparent), url('../img/banner-bg.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/banner-bg.png');
+
+    @include mixins.mq("medium") {
+        background-image: linear-gradient(to right, black, transparent), url('../img/banner-bg.png');
+    }
     background-size: cover;
-    background-position: center;
+    background-position: 50% center;
     background-repeat: no-repeat;
 
     @include mixins.mq("medium") {
@@ -19,6 +23,8 @@
 
 .banner-overlay h1 {
     color: variables.$white;
+    font-weight: 600;
+    font-size: 40px;
 
     @include mixins.mq("medium") {
         font-size: 4rem;
@@ -26,12 +32,13 @@
 }
 
 .banner-overlay p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: variables.$white;
 }
 
 .banner-overlay {
         text-align: center;
+        padding: 0 15px;
 
         @include mixins.mq("medium") {
             text-align: left;

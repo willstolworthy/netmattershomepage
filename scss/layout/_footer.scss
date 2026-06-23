@@ -20,6 +20,11 @@ footer {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: 0 15px;
+
+    @include mixins.mq("medium") {
+        padding: 0;
+    }
 
     @include mixins.mq("large") {
         flex-direction: row;

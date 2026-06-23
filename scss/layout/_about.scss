@@ -22,27 +22,45 @@
 
     .icon-star-full {
         font-size: 3.125rem;
+        display: inline-block;
+        margin-bottom: 25px;
     }
 
     .quote {
         font-size: 1.2rem;
+        font-weight: 600;
     }
 
     .what-clients-think p {
         font-style: italic;
     }
 
+    .what-clients-think .quote-author {
+        font-style: normal;
+    }
+
     .quote-author {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 25px;
         color: variables.$quote-text;
     }
 
     h1 {
         font-size: 2.25rem;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     p {
         margin: 0 0 20px;
         line-height: 2rem;
+    }
+
+    .btn {
+        height: 57px;
+        padding: 10px 30px;
+        margin-right: 10px;
+        display: inline-flex;
+        align-items: center;
     }
 }

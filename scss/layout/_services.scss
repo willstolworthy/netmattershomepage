@@ -1,8 +1,30 @@
 @use '../utilities/variables';
+@use '../utilities/mixins';
 
 .services h2 {
   font-size: 2.5rem;
   font-weight: 400;
+}
+
+.services .services-view-all {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    @include mixins.link-style-dark;
+
+    @include mixins.mq("medium") {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+        margin: 0;
+    }
+}
+
+.services {
+    @include mixins.mq("medium") {
+        position: relative;
+    }
 }
 
 .services h3 {
@@ -16,16 +38,23 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  @include mixins.mq("medium") {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
 }
 
-.service-card:nth-child(-n+3) {
-  grid-column: span 4;
-}
+@include mixins.mq("medium") {
+  .service-card:nth-child(-n+3) {
+    grid-column: span 4;
+  }
 
-.service-card:nth-child(n+4) {
-  grid-column: span 3;
+  .service-card:nth-child(n+4) {
+    grid-column: span 3;
+  }
 }
 
 .service-card {
