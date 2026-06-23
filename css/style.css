@@ -36,6 +36,34 @@
   content: "\ea3c";
 }
 
+.icon-cogs:before {
+  content: "\e905";
+}
+
+.icon-bar-graph:before {
+  content: "\e903";
+}
+
+.icon-security:before {
+  content: "\e904";
+}
+
+.icon-school:before {
+  content: "\e901";
+}
+
+.icon-phone_in_talk:before {
+  content: "\e902";
+}
+
+.icon-display:before {
+  content: "\e956";
+}
+
+.icon-embed2:before {
+  content: "\ea80";
+}
+
 .btn {
   display: inline-block;
   font-size: 1.25rem;
@@ -134,7 +162,7 @@
 
 .basic {
   background-color: #fff;
-  height: 300px;
+  padding-bottom: 40px;
 }
 
 body {
@@ -425,7 +453,7 @@ footer h4 {
 
 .partner-banner {
   overflow: hidden;
-  padding: 30px 0 30px;
+  padding: 50px 0;
 }
 .partner-banner .partners {
   display: flex;
@@ -577,6 +605,82 @@ footer h4 {
   font-size: 0.95rem;
   font-weight: 600;
   color: #333645;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.service-card:nth-child(-n+3) {
+  grid-column: span 4;
+}
+
+.service-card:nth-child(n+4) {
+  grid-column: span 3;
+}
+
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.services .container {
+  padding: 0 20px;
+}
+
+.service-card {
+  padding: 30px;
+}
+
+.service-card h2 {
+  margin: 0;
+  padding: 15px 0 10px;
+  border-radius: 50%;
+}
+
+.icon {
+  font-size: 2rem;
+  color: white;
+}
+
+.icon-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.icon-bg-grey {
+  background-color: grey;
+}
+
+.icon-bg-blue {
+  background-color: blue;
+}
+
+.icon-bg-green {
+  background-color: green;
+}
+
+.icon-bg-red {
+  background-color: red;
+}
+
+.icon-bg-purple {
+  background-color: purple;
+}
+
+.icon-bg-pink {
+  background-color: pink;
+}
+
+.icon-bg-tomato {
+  background-color: tomato;
 }
 
 /*# sourceMappingURL=style.css.map */
