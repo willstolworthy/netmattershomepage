@@ -30,7 +30,7 @@
     &:first-child { 
         margin-left: 0; 
     }
-    
+
     &:last-child { 
         margin-right: 0; 
     }
@@ -84,6 +84,10 @@
         font-weight: 550;
         margin-top: 0;
     }
+}
+
+.news-text h3 .icon-arrow-right2 {
+  font-weight: normal;
 }
 
 .news3 .news-text h3 {

@@ -1,5 +1,19 @@
 @use '../utilities/variables';
 
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.services h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  .icon-arrow-right2 {
+    font-weight: normal;
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -18,6 +32,7 @@
     border: 1px solid #ccc;
     border-radius: 15px;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .services .container {
@@ -32,6 +47,13 @@
     margin: 0;
     padding: 15px 0 10px;
     border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    font-size: 0.82rem;
+    margin: 6px 0 15px;
+    line-height: 1.4rem;
 }
 
 .icon {
@@ -43,35 +65,147 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
 }
 
-.icon-bg-grey { 
+.icon-bg-grey, .btn-service-grey { 
   background-color: variables.$icon-bg-grey;
 }
 
-.icon-bg-blue { 
+.icon-bg-blue, .btn-service-blue { 
   background-color: variables.$icon-bg-blue;
 }
 
-.icon-bg-green { 
+.icon-bg-green, .btn-service-green { 
   background-color: variables.$icon-bg-green;
 }
 
-.icon-bg-red { 
+.icon-bg-red, .btn-service-red { 
   background-color: variables.$icon-bg-red;
 }
 
-.icon-bg-purple { 
+.icon-bg-purple, .btn-service-purple { 
   background-color: variables.$icon-bg-purple;
 }
 
-.icon-bg-pink { 
+.icon-bg-pink, .btn-service-pink { 
   background-color: variables.$icon-bg-pink;
 }
 
-.icon-bg-tomato { 
+.icon-bg-tomato, .btn-service-tomato{ 
   background-color: variables.$icon-bg-tomato;
+}
+
+.service-card:nth-child(1):hover {
+  background-color: variables.$icon-bg-grey;
+  .icon-bg {
+    background-color: white;
+  }
+  .icon {
+    color: variables.$icon-bg-grey;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-grey;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(2):hover {
+  background-color: variables.$icon-bg-blue;
+  .icon-bg {
+    background-color: white;
+  }
+  .icon {
+    color: variables.$icon-bg-blue;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-blue;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(3):hover {
+  background-color: variables.$icon-bg-green;
+  .icon-bg {
+    background-color: white;
+  }
+  .icon {
+    color: variables.$icon-bg-green;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-green;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(4):hover {
+  background-color: variables.$icon-bg-red;
+  .icon-bg { 
+  background-color: white;
+}
+  .icon {
+    color: variables.$icon-bg-red;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-red;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(5):hover {
+  background-color: variables.$icon-bg-purple;
+  .icon-bg {
+    background-color: white; 
+  }
+  .icon {
+    color: variables.$icon-bg-purple;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-purple;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(6):hover {
+  background-color: variables.$icon-bg-pink;
+  .icon-bg {
+    background-color: white;
+  }
+  .icon {
+    color: variables.$icon-bg-pink;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-pink;
+  }
+  h2, p {
+    color: white;
+  }
+}
+
+.service-card:nth-child(7):hover {
+  background-color: variables.$icon-bg-tomato;
+  .icon-bg {
+    background-color: white;
+  }
+  .icon {
+    color: variables.$icon-bg-tomato;
+  }
+  .btn {
+    background-color: white; color: variables.$icon-bg-tomato;
+  }
+  h2, p {
+    color: white;
+  }
 }

@@ -8,6 +8,8 @@
 [class^=icon-],
 [class*=" icon-"] {
   font-family: "icomoon" !important;
+  font-weight: normal !important;
+  font-style: normal;
   line-height: 1;
 }
 
@@ -563,6 +565,10 @@ footer h4 {
   margin-top: 0;
 }
 
+.news-text h3 .icon-arrow-right2 {
+  font-weight: normal;
+}
+
 .news3 .news-text h3 {
   color: #4387f6;
 }
@@ -607,6 +613,19 @@ footer h4 {
   color: #333645;
 }
 
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.services h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.services h3 .icon-arrow-right2 {
+  font-weight: normal;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -625,6 +644,7 @@ footer h4 {
   border: 1px solid #ccc;
   border-radius: 15px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .services .container {
@@ -639,6 +659,13 @@ footer h4 {
   margin: 0;
   padding: 15px 0 10px;
   border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.82rem;
+  margin: 6px 0 15px;
+  line-height: 1.4rem;
 }
 
 .icon {
@@ -650,37 +677,156 @@ footer h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
 }
 
-.icon-bg-grey {
-  background-color: grey;
+.icon-bg-grey, .btn-service-grey {
+  background-color: #67809f;
 }
 
-.icon-bg-blue {
-  background-color: blue;
+.icon-bg-blue, .btn-service-blue {
+  background-color: #4183d7;
 }
 
-.icon-bg-green {
-  background-color: green;
+.icon-bg-green, .btn-service-green {
+  background-color: #2ecc71;
 }
 
-.icon-bg-red {
-  background-color: red;
+.icon-bg-red, .btn-service-red {
+  background-color: #d64541;
 }
 
-.icon-bg-purple {
-  background-color: purple;
+.icon-bg-purple, .btn-service-purple {
+  background-color: #926fb1;
 }
 
-.icon-bg-pink {
-  background-color: pink;
+.icon-bg-pink, .btn-service-pink {
+  background-color: #f62459;
 }
 
-.icon-bg-tomato {
-  background-color: tomato;
+.icon-bg-tomato, .btn-service-tomato {
+  background-color: #ce4125;
+}
+
+.service-card:nth-child(1):hover {
+  background-color: #67809f;
+}
+.service-card:nth-child(1):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(1):hover .icon {
+  color: #67809f;
+}
+.service-card:nth-child(1):hover .btn {
+  background-color: white;
+  color: #67809f;
+}
+.service-card:nth-child(1):hover h2, .service-card:nth-child(1):hover p {
+  color: white;
+}
+
+.service-card:nth-child(2):hover {
+  background-color: #4183d7;
+}
+.service-card:nth-child(2):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(2):hover .icon {
+  color: #4183d7;
+}
+.service-card:nth-child(2):hover .btn {
+  background-color: white;
+  color: #4183d7;
+}
+.service-card:nth-child(2):hover h2, .service-card:nth-child(2):hover p {
+  color: white;
+}
+
+.service-card:nth-child(3):hover {
+  background-color: #2ecc71;
+}
+.service-card:nth-child(3):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(3):hover .icon {
+  color: #2ecc71;
+}
+.service-card:nth-child(3):hover .btn {
+  background-color: white;
+  color: #2ecc71;
+}
+.service-card:nth-child(3):hover h2, .service-card:nth-child(3):hover p {
+  color: white;
+}
+
+.service-card:nth-child(4):hover {
+  background-color: #d64541;
+}
+.service-card:nth-child(4):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(4):hover .icon {
+  color: #d64541;
+}
+.service-card:nth-child(4):hover .btn {
+  background-color: white;
+  color: #d64541;
+}
+.service-card:nth-child(4):hover h2, .service-card:nth-child(4):hover p {
+  color: white;
+}
+
+.service-card:nth-child(5):hover {
+  background-color: #926fb1;
+}
+.service-card:nth-child(5):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(5):hover .icon {
+  color: #926fb1;
+}
+.service-card:nth-child(5):hover .btn {
+  background-color: white;
+  color: #926fb1;
+}
+.service-card:nth-child(5):hover h2, .service-card:nth-child(5):hover p {
+  color: white;
+}
+
+.service-card:nth-child(6):hover {
+  background-color: #f62459;
+}
+.service-card:nth-child(6):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(6):hover .icon {
+  color: #f62459;
+}
+.service-card:nth-child(6):hover .btn {
+  background-color: white;
+  color: #f62459;
+}
+.service-card:nth-child(6):hover h2, .service-card:nth-child(6):hover p {
+  color: white;
+}
+
+.service-card:nth-child(7):hover {
+  background-color: #ce4125;
+}
+.service-card:nth-child(7):hover .icon-bg {
+  background-color: white;
+}
+.service-card:nth-child(7):hover .icon {
+  color: #ce4125;
+}
+.service-card:nth-child(7):hover .btn {
+  background-color: white;
+  color: #ce4125;
+}
+.service-card:nth-child(7):hover h2, .service-card:nth-child(7):hover p {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
