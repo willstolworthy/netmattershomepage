@@ -707,6 +707,24 @@ footer h4 {
   color: #333645;
 }
 
+.right {
+  display: none;
+}
+@media (min-width: 768px) {
+  .right {
+    display: block;
+  }
+}
+
+.news-view-all {
+  display: block;
+}
+@media (min-width: 768px) {
+  .news-view-all {
+    display: none;
+  }
+}
+
 .services h2 {
   font-size: 2.5rem;
   font-weight: 400;
@@ -962,6 +980,26 @@ footer h4 {
 }
 .service-card:nth-child(7):hover h2, .service-card:nth-child(7):hover p {
   color: white;
+}
+
+.headings .right {
+  display: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .headings .right {
+    display: block;
+  }
+}
+
+.services-view-all {
+  display: block;
+}
+@media (min-width: 768px) {
+  .services-view-all {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

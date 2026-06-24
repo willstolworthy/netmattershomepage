@@ -246,3 +246,21 @@
     color: white;
   }
 }
+
+.headings .right {
+    display: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    @include mixins.mq("medium") {
+        display: block;
+    }
+}
+
+.services-view-all {
+    display: block;
+
+    @include mixins.mq("medium") {
+        display: none;
+    }
+}
