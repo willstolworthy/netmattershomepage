@@ -79,7 +79,7 @@ footer {
         padding: 12px 22px 16px;
         margin-right: variables.$space-xs;
         margin-bottom: variables.$space-xs;
-        width: 35%;
+        width: auto;
 
         @include mixins.mq("large") {
             width: auto;
@@ -132,4 +132,30 @@ footer {
     background-color: variables.$dark-bg;
 
     @include mixins.link-style-full;
+}
+
+.footer-copyright {
+    width: 100%;
+
+    .footer-br {
+        display: block;
+
+        @include mixins.mq("large") {
+            display: none;
+        }
+    }
+
+    .footer-hyphen {
+        display: none;
+
+        @include mixins.mq("large") {
+            display: inline;
+        }
+    }
+}
+
+
+.footer-copyright {
+    padding: 0 15px;
+    width: 100%
 }

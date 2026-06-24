@@ -11,7 +11,7 @@
 .drop-down {
     display: none;
 
-    @include mixins.mq("medium") {
+    @include mixins.mq("large") {
         display: block;
     }
 

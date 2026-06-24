@@ -11,12 +11,11 @@
     }
 
     h2 {
-        font-size: 2.5rem;
         font-weight: 400;
+        color: variables.$dark-text;
     }
 
     h3 {
-        font-size: 2.5rem;
         font-weight: 600;
 
         .icon-arrow-right2 {
@@ -30,7 +29,7 @@
 
     .services-view-all {
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 2.25rem;
         font-weight: 600;
         @include mixins.link-style-dark;
 
@@ -57,6 +56,16 @@
 
 @include mixins.mq("medium") {
     .service-card:nth-child(-n+3) {
+        grid-column: span 12;
+    }
+
+    .service-card:nth-child(n+4) {
+        grid-column: span 6;
+    }
+}
+
+@include mixins.mq("large") {
+    .service-card:nth-child(-n+3) {
         grid-column: span 4;
     }
 
@@ -74,6 +83,9 @@
     position: relative;
     top: 0;
     transition: variables.$transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &:hover {
         top: variables.$card-hover-lift;
@@ -95,6 +107,7 @@
         font-size: 0.82rem;
         margin: 6px 0 variables.$space-sm;
         line-height: 1.4rem;
+        flex: 1;
     }
 }
 

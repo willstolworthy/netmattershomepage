@@ -63,4 +63,16 @@
         display: inline-flex;
         align-items: center;
     }
+
+    .btn.why-choose-us,
+    .btn.google {
+        margin-bottom: 17px;
+    }
+
+    @include mixins.mq("medium") {
+        .btn.why-choose-us,
+        .btn.google {
+            margin-bottom: 0;
+        }
+    }
 }

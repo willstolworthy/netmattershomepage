@@ -12,6 +12,7 @@ body {
 .container {
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
 
     @include mixins.mq("medium") {
         width: 750px;
