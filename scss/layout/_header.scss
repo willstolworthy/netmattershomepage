@@ -1,8 +1,163 @@
 @use '../utilities/variables';
 @use '../utilities/mixins';
 
-.drop-down {
-    background-color: variables.$dark-bg;
+.nav {
+    background-color: variables.$white;
     height: 100px;
-    width: 100px;
+    width: auto;
+}
+
+.drop-down {
+    background-color: variables.$main-bg;
+    height: 100px;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+
+    .container,
+    .row {
+        height: 100%;
+        align-items: center;
+    }
+
+    $drop-colors: (
+        'development': variables.$icon-bg-grey,
+        'it':          variables.$icon-bg-blue,
+        'marketing':   variables.$icon-bg-green,
+        'telecoms':    variables.$icon-bg-red,
+        'web':         variables.$icon-bg-purple,
+        'security':    variables.$icon-bg-pink,
+        'course':      variables.$icon-bg-tomato,
+    );
+
+    $panel-colors: (
+        'development': variables.$panel-grey,
+        'it':          variables.$panel-blue,
+        'marketing':   variables.$panel-green,
+        'telecoms':    variables.$panel-red,
+        'web':         variables.$panel-purple,
+        'security':    variables.$panel-pink,
+        'course':      variables.$panel-tomato,
+    );
+
+    .development-drop,
+    .it-drop,
+    .marketing-drop,
+    .telecoms-drop,
+    .web-drop,
+    .security-drop,
+    .course-drop {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: variables.$white;
+        max-height: 100%;
+        text-transform: uppercase;
+        line-height: 0.8;
+        text-decoration: none;
+        position: relative;
+
+        small {
+            margin-top: 10px;
+            font-size: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .icon {
+            font-size: 1.4rem;
+        }
+    }
+
+    @each $name, $color in $drop-colors {
+        .#{$name}-drop .icon { color: $color; }
+
+        .#{$name}-drop:hover,
+        &:has(.#{$name}-panel:hover) .#{$name}-drop {
+            background-color: $color;
+            .icon { color: variables.$white; }
+        }
+    }
+
+    @each $name, $panel-color in $panel-colors {
+        &:has(.#{$name}-drop:hover) .#{$name}-panel,
+        &:has(.#{$name}-panel:hover) .#{$name}-panel {
+            display: block;
+            background-color: $panel-color;
+        }
+    }
+
+    @each $name, $color in $drop-colors {
+        .#{$name}-drop:hover::after,
+        &:has(.#{$name}-panel:hover) .#{$name}-drop::after {
+            content: '';
+            position: absolute;
+            bottom: -35px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: $color;
+            clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+            z-index: 101;
+        }
+    }
+
+    .row {
+        flex-wrap: nowrap;
+
+        a:not(.btn):hover {
+            text-decoration: none;
+        }
+    }
+
+    .drop-panel {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        padding: 20px 0;
+        color: variables.$white;
+
+        @include mixins.link-style-full;
+
+        h2 {
+            margin: 10px 0 15px;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        .link-text {
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+
+        .banner-menu-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 0.6rem 0.9rem 0.6rem 0;
+
+                &:hover {
+                    text-decoration: none;
+
+                    .link-text {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .icon {
+                font-size: 1.3rem;
+            }
+        }
+    }
 }

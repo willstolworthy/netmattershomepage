@@ -61,3 +61,32 @@ $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 // Transition
 
 $transition: 0.5s ease;
+
+$service-card-colors: (
+    1: $icon-bg-grey,
+    2: $icon-bg-blue,
+    3: $icon-bg-green,
+    4: $icon-bg-red,
+    5: $icon-bg-purple,
+    6: $icon-bg-pink,
+    7: $icon-bg-tomato,
+);
+
+
+$panel-grey: #526781;
+$panel-blue: #286abd;
+$panel-green: #25a25a;
+$panel-red: #bc2c28;
+$panel-purple: #79539a;
+$panel-pink: #de093f;
+$panel-tomato: #a3331d;
+
+$panel-colours: (
+    1: $panel-grey,
+    2: $panel-blue,
+    3: $panel-green,
+    4: $panel-red,
+    5: $panel-purple,
+    6: $panel-pink,
+    7: $panel-tomato,
+);
