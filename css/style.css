@@ -971,7 +971,9 @@ footer h4 {
 }
 
 .headings {
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .headings a {
   color: #333645;
@@ -984,12 +986,11 @@ footer h4 {
   font-weight: 600;
 }
 .headings .left {
-  float: left;
   font-size: 2.25rem;
 }
 .headings .right {
-  float: right;
   font-size: 1.7rem;
+  margin: 0;
   display: none;
 }
 @media (min-width: 768px) {
@@ -1165,6 +1166,9 @@ footer h4 {
   .services {
     position: relative;
   }
+}
+.services .headings {
+  align-items: center;
 }
 .services h2 {
   font-size: 2.5rem;
@@ -1427,6 +1431,14 @@ footer h4 {
   width: auto;
 }
 
+.drop-down {
+  display: none;
+}
+@media (min-width: 768px) {
+  .drop-down {
+    display: block;
+  }
+}
 .drop-down {
   background-color: #323544;
   height: 100px;

@@ -9,6 +9,12 @@
 }
 
 .drop-down {
+    display: none;
+
+    @include mixins.mq("medium") {
+        display: block;
+    }
+
     background-color: variables.$main-bg;
     height: variables.$nav-height;
     width: 100%;
