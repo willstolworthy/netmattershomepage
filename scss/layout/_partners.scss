@@ -1,6 +1,8 @@
+@use '../utilities/variables';
+
 .partner-banner {
     overflow: hidden;
-    padding: 50px 0;
+    padding: variables.$space-xxl 0;
 
     .partners {
         display: flex;
@@ -12,7 +14,7 @@
             max-width: 200px;
             object-fit: contain;
             flex-shrink: 0;
-            padding: 0 20px;
+            padding: 0 variables.$space-md;
             filter: grayscale(100%);
 
             &:hover {

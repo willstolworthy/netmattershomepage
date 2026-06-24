@@ -4,7 +4,7 @@
 .about {
     background-color: variables.$main-bg;
     color: variables.$white;
-    padding-bottom: 50px;
+    padding-bottom: variables.$space-xxl;
 
     .welcome,
     .what-clients-think {
@@ -12,8 +12,8 @@
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: variables.$space-sm;
+        padding-right: variables.$space-sm;
 
         @include mixins.mq("medium") {
             width: 50%;
@@ -52,14 +52,14 @@
     }
 
     p {
-        margin: 0 0 20px;
+        margin: 0 0 variables.$space-md;
         line-height: 2rem;
     }
 
     .btn {
         height: 57px;
-        padding: 10px 30px;
-        margin-right: 10px;
+        padding: variables.$space-xs variables.$space-lg;
+        margin-right: variables.$space-xs;
         display: inline-flex;
         align-items: center;
     }

@@ -1,5 +1,6 @@
 @use '../utilities/mixins';
 @use '../utilities/variables';
+@use 'sass:map';
 
 .headings {
     overflow: hidden;
@@ -27,16 +28,16 @@
 
 .latest-news {
     color: variables.$dark-text;
-    padding: 10px 0 0;
-    margin-bottom: 10px;
+    padding: variables.$space-xs 0 0;
+    margin-bottom: variables.$space-xs;
 
     @include mixins.mq("medium") {
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: variables.$space-xxl;
     }
 
     .left {
-        padding-left: 15px;
+        padding-left: variables.$space-sm;
 
         @include mixins.mq("medium") {
             padding-left: 0;
@@ -61,10 +62,10 @@
     }
 }
 
-.news1, .news2, .news3 {
+.news-card {
     flex: 1;
     min-width: 0;
-    margin: 0 15px;
+    margin: 0 variables.$space-sm;
     position: relative;
     box-shadow: variables.$box-shadow;
     top: 0;
@@ -87,7 +88,7 @@
     }
 
     &:hover {
-        top: -10px;
+        top: variables.$card-hover-lift;
         transition: variables.$transition;
     }
 }
@@ -106,7 +107,7 @@
     .row {
         align-items: flex-start;
         flex-direction: column;
-        gap: 15px;
+        gap: variables.$space-sm;
 
         @include mixins.mq("medium") {
             flex-direction: row;
@@ -116,8 +117,8 @@
 
     .btn {
         font-size: 1rem;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: variables.$space-sm;
+        padding-right: variables.$space-sm;
     }
 }
 
@@ -125,7 +126,7 @@
     position: absolute;
     inset: 0;
     cursor: pointer;
-    z-index: 1;
+    z-index: map.get(variables.$z-index, 'overlay');
 }
 
 .news-img {
@@ -134,15 +135,15 @@
 
 .news-category {
     position: absolute;
-    top: 10px;
+    top: variables.$space-xs;
     right: 0;
-    padding: 3px 10px;
+    padding: 0.1875rem variables.$space-xs;
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: bold;
     background-color: variables.$news-title-grey;
     cursor: pointer;
-    z-index: 1;
+    z-index: map.get(variables.$z-index, 'overlay');
 }
 
 .news-text {
@@ -150,13 +151,13 @@
     border-right: 1px solid variables.$border-grey;
     border-bottom: 1px solid variables.$border-grey;
     margin-top: 0;
-    padding: 30px;
+    padding: variables.$space-lg;
 
     h3 {
-        min-height: 3em;
+        min-height: 3rem;
         color: variables.$news-title-grey;
         font-size: 1rem;
-        font-weight: 550;
+        font-weight: 600;
         margin-top: 0;
 
         .icon-arrow-right2 {
@@ -165,8 +166,8 @@
     }
 
     p {
-        color: #666;
-        font-size: 0.82rem;
+        color: variables.$text-grey;
+        font-size: 0.875rem;
     }
 }
 
@@ -174,18 +175,18 @@
     display: flex;
     align-items: center;
     min-width: 0;
-    padding-top: 30px;
-    margin-top: 30px;
+    padding-top: variables.$space-lg;
+    margin-top: variables.$space-lg;
     border-top: solid variables.$border-grey 1px;
-    color: #666;
-    font-size: 0.82rem;
+    color: variables.$text-grey;
+    font-size: 0.875rem;
 
     .author-img img {
         border-radius: 50%;
     }
 
     .author-info {
-        padding-left: 20px;
+        padding-left: variables.$space-md;
     }
 
     b {

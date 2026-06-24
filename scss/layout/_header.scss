@@ -1,15 +1,16 @@
 @use '../utilities/variables';
 @use '../utilities/mixins';
+@use 'sass:map';
 
 .nav {
     background-color: variables.$white;
-    height: 100px;
+    height: variables.$nav-height;
     width: auto;
 }
 
 .drop-down {
     background-color: variables.$main-bg;
-    height: 100px;
+    height: variables.$nav-height;
     width: 100%;
     overflow: visible;
     position: relative;
@@ -19,6 +20,8 @@
         height: 100%;
         align-items: center;
     }
+
+    // Colour Maps
 
     $drop-colors: (
         'development': variables.$icon-bg-grey,
@@ -62,7 +65,7 @@
         position: relative;
 
         small {
-            margin-top: 10px;
+            margin-top: variables.$space-xs;
             font-size: 0.6rem;
             line-height: 1.5;
         }
@@ -72,8 +75,12 @@
         }
     }
 
+    // Hover Logic
+
     @each $name, $color in $drop-colors {
-        .#{$name}-drop .icon { color: $color; }
+        .#{$name}-drop .icon {
+            color: $color;
+        }
 
         .#{$name}-drop:hover,
         &:has(.#{$name}-panel:hover) .#{$name}-drop {
@@ -101,7 +108,7 @@
             height: 35px;
             background-color: $color;
             clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-            z-index: 101;
+            z-index: map.get(variables.$z-index, 'triangle');
         }
     }
 
@@ -115,31 +122,31 @@
 
     .drop-panel {
         position: absolute;
-        top: 100px;
+        top: variables.$nav-height;
         left: 0;
         width: 100%;
-        z-index: 100;
+        z-index: map.get(variables.$z-index, 'panel');
         display: none;
-        padding: 20px 0;
+        padding: variables.$space-xl 0;
         color: variables.$white;
 
         @include mixins.link-style-full;
 
         h2 {
-            margin: 10px 0 15px;
+            margin: 0 0 variables.$space-sm;
             font-weight: 500;
             font-size: 2rem;
         }
 
         .link-text {
             font-size: 1.2rem;
-            margin-left: 10px;
+            margin-left: variables.$space-xs;
         }
 
         .banner-menu-items {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px 0;
+            gap: variables.$space-xs 0;
 
             a {
                 display: flex;

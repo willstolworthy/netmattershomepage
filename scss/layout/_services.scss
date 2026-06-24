@@ -21,7 +21,7 @@
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 variables.$space-md;
     }
 
     .services-view-all {
@@ -43,11 +43,11 @@
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: variables.$space-sm;
 
     @include mixins.mq("medium") {
         grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
+        gap: variables.$space-lg;
     }
 }
 
@@ -63,17 +63,16 @@
 
 .service-card {
     border: 1px solid variables.$border-grey;
-    border-radius: 15px;
+    border-radius: variables.$card-border-radius;
     text-align: center;
     box-shadow: variables.$box-shadow;
-    padding: 30px;
+    padding: variables.$space-lg;
     position: relative;
     top: 0;
     transition: variables.$transition;
 
     &:hover {
-        top: -10px;
-        transition: variables.$transition;
+        top: variables.$card-hover-lift;
     }
 
     .service-link {
@@ -83,14 +82,14 @@
 
     h2 {
         margin: 0;
-        padding: 15px 0 10px;
+        padding: variables.$space-sm 0 variables.$space-xs;
         border-radius: 50%;
         font-size: 1.2rem;
     }
 
     p {
         font-size: 0.82rem;
-        margin: 6px 0 15px;
+        margin: 6px 0 variables.$space-sm;
         line-height: 1.4rem;
     }
 }
@@ -104,8 +103,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 67px;
-    height: 67px;
+    width: variables.$icon-bg-size;
+    height: variables.$icon-bg-size;
     border-radius: 50%;
 }
 
@@ -137,19 +136,21 @@
     background-color: variables.$icon-bg-tomato;
 }
 
-@each $index, $color in variables.$panel-colours {
+@each $index, $color in variables.$panel-colors {
     .service-card:nth-child(#{$index}):hover {
         background-color: $color;
         .icon-bg {
-          background-color: variables.$white;
+            background-color: variables.$white;
         }
         .icon {
-          color: $color;
+            color: $color;
         }
         .btn {
-          background-color: variables.$white; color: $color;
+            background-color: variables.$white;
+            color: $color;
         }
-        h2, p { color: variables.$white;
+        h2, p {
+            color: variables.$white;
         }
     }
 }

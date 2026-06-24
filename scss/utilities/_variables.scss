@@ -2,7 +2,7 @@
 
 $white: #fff;
 $black: #000;
-$dark-text : #333645;
+$dark-text: #333645;
 
 $main-bg: #323544;
 $dark-bg: #212330;
@@ -19,16 +19,20 @@ $btn-green-hover: #009b69;
 $btn-purple: #926fb1;
 $btn-purple-hover: #7e57a8;
 
-$btn-yellow: #f7B322;
-$btn-yellow-hover: #f7B322;
+$btn-yellow: #f7b322;
+$btn-yellow-hover: #f7b322;
 
-$star-gold: #FFA500;
+$star-gold: #ffa500;
 
 $news-title-grey: #67809f;
 
 $border-grey: #ccc;
 
+$text-grey: #666;
+
 $quote-text: #a3a8ac;
+
+// Icon Colours
 
 $icon-bg-grey: #67809f;
 $icon-bg-blue: #4183d7;
@@ -45,7 +49,40 @@ $linkedin-color: #0077b5;
 $twitter-color: #1da1f2;
 $instagram-color: #e1306c;
 
+// Brand
+
 $footer-brand-width: 320px;
+
+// Spacing
+
+$space-xs: 10px;
+$space-sm: 15px;
+$space-md: 20px;
+$space-lg: 30px;
+$space-xl: 40px;
+$space-xxl: 50px;
+
+// Card
+
+$card-border-radius: 15px;
+$card-hover-lift: -10px;
+
+// Icon
+
+$icon-bg-size: 67px;
+
+// Z-index
+
+$z-index: (
+    'overlay': 1,
+    'tooltip': 2,
+    'panel': 3,
+    'triangle': 4,
+);
+
+// Nav
+
+$nav-height: 100px;
 
 // Media Query Breakpoints
 
@@ -62,6 +99,8 @@ $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 
 $transition: 0.5s ease;
 
+// Service card colours
+
 $service-card-colors: (
     1: $icon-bg-grey,
     2: $icon-bg-blue,
@@ -72,6 +111,7 @@ $service-card-colors: (
     7: $icon-bg-tomato,
 );
 
+// Panel colours
 
 $panel-grey: #526781;
 $panel-blue: #286abd;
@@ -81,7 +121,7 @@ $panel-purple: #79539a;
 $panel-pink: #de093f;
 $panel-tomato: #a3331d;
 
-$panel-colours: (
+$panel-colors: (
     1: $panel-grey,
     2: $panel-blue,
     3: $panel-green,
