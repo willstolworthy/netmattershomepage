@@ -125,7 +125,7 @@
 }
 @media (min-width: 768px) {
   .banner-bg {
-    background-image: linear-gradient(to right, black, transparent), url("../img/banner-bg.png");
+    background-image: linear-gradient(to right, #000, transparent), url("../img/banner-bg.png");
   }
 }
 .banner-bg {
@@ -790,33 +790,18 @@ footer h4 {
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-}
-
-.services .container {
-  padding: 0 20px;
-}
-
-.service-card {
   padding: 30px;
   position: relative;
   top: 0;
   transition: 0.5s ease;
 }
-
-.service-link {
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.service-card .btn {
-  position: relative;
-  z-index: 2;
-}
 .service-card:hover {
   top: -10px;
   transition: 0.5s ease;
+}
+
+.services .container {
+  padding: 0 20px;
 }
 
 .service-card h2 {
@@ -1011,6 +996,12 @@ footer h4 {
   .services-view-all {
     display: none;
   }
+}
+
+.drop-down {
+  background-color: #212330;
+  height: 100px;
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

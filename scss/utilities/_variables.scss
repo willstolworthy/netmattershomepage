@@ -1,6 +1,7 @@
 // Colours
 
 $white: #fff;
+$black: #000;
 $dark-text : #333645;
 
 $main-bg: #323544;
@@ -24,6 +25,8 @@ $btn-yellow-hover: #f7B322;
 $star-gold: #FFA500;
 
 $news-title-grey: #67809f;
+
+$border-grey: #ccc;
 
 $quote-text: #a3a8ac;
 
@@ -50,3 +53,11 @@ $breakpoint-small: 480px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-xlarge: 1260px;
+
+// Shadow
+
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
+// Transition
+
+$transition: 0.5s ease;

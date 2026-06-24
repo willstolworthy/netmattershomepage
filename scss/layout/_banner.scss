@@ -5,7 +5,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/banner-bg.png');
 
     @include mixins.mq("medium") {
-        background-image: linear-gradient(to right, black, transparent), url('../img/banner-bg.png');
+        background-image: linear-gradient(to right, variables.$black, transparent), url('../img/banner-bg.png');
     }
     background-size: cover;
     background-position: 50% center;

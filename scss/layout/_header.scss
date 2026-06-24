@@ -1,0 +1,8 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.drop-down {
+    background-color: variables.$dark-bg;
+    height: 100px;
+    width: 100px;
+}

@@ -58,26 +58,23 @@
 }
 
 .service-card {
-    border: 1px solid #ccc;
+    border: 1px solid variables.$border-grey;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: variables.$box-shadow;
+    padding: 30px;
+    position: relative;
+    top: 0;
+    transition: variables.$transition;
+
+    &:hover {
+      top: -10px;
+      transition: variables.$transition;
+    }
 }
 
 .services .container {
     padding: 0 20px;
-}
-
-.service-card {
-    padding: 30px;
-    position: relative;
-    top: 0;
-    transition: 0.5s ease;
-
-    &:hover {
-      top: -10px;
-      transition: 0.5s ease;
-    }
 }
 
 .service-card h2 {
