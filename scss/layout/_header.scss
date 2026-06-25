@@ -4,8 +4,251 @@
 
 .nav {
     background-color: variables.$white;
-    height: variables.$nav-height;
+    height: auto;
     width: auto;
+
+    padding: 20px 0;
+
+    @include mixins.mq("medium") {
+        height: variables.$nav-height;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @include mixins.mq("medium") {
+            display: block;
+        }
+    }
+
+    .search-mobile {
+        display: flex;
+        padding: 10px 15px;
+
+        @include mixins.mq("medium") {
+            display: none;
+        }
+
+        .mobile-searchbar {
+            width: 100%;
+            height: 40px;
+            padding: 5px 15px;
+            font-size: 14px;
+            border: variables.$border-grey 1px solid;
+            border-radius: 3px;
+
+            &:focus {
+                outline: none;
+                border: #5bc0de 1px solid;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+            }
+        }
+    }
+
+    .row {
+        height: 68px;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        @include mixins.mq("medium") {
+            height: variables.$nav-height;
+        }
+
+        .nm-header-logo,
+        .nm-header-nav {
+            padding: 0 15px;
+        }
+
+        .nm-header-logo {
+            min-width: 0;
+            align-items: center;
+        }
+
+        .nm-header-logo img {
+            height: 70px;
+            width: 100%;
+            object-fit: contain;
+            object-position: left center;
+
+            @include mixins.mq("large") {
+                height: 4rem;
+                width: auto;
+                object-fit: unset;
+            }
+        }
+
+        .nm-header-nav {
+            flex: 1;
+            min-width: max-content;
+            height: 68px;
+
+            @include mixins.mq("medium") {
+                height: variables.$nav-height;
+            }
+        }
+
+    .btn-grey.btn,
+    .btn-blue.btn,
+    .btn-dark-grey {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 56px;
+        font-size: 18px;
+        padding: 5px 15px;
+        border-radius: 3px;
+        margin-left: 20px;
+    }
+    
+    .icon {
+        font-size: 1.4rem;
+        margin-right: 5px;
+    }
+
+    .nav-input {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    .search {
+        display: none;
+        align-items: center;
+        margin-left: 20px;
+
+        @include mixins.mq("medium") {
+            display: flex;
+        }
+
+        .btn-grey {
+            border-radius: 3px;
+            margin-left: 0;
+            justify-content: center;
+            padding: 5px 20px;
+
+            @include mixins.mq("medium") {
+                border-radius: 0 3px 3px 0;
+            }
+
+            @include mixins.mq("large") {
+                border-radius: 3px;
+            }
+
+            @include mixins.mq("xlarge") {
+                border-radius: 0 3px 3px 0;
+            }
+
+            .icon {
+                margin: 0;
+                line-height: 1;
+            }
+        }
+    }
+
+    .nav-btns {
+        display: none;
+
+        @include mixins.mq("large") {
+            display: flex;
+        }
+    }
+
+    .search-input {
+        display: none;
+
+        @include mixins.mq("medium") {
+            display: block;
+        }
+
+        @include mixins.mq("large") {
+            display: none;
+        }
+
+        @include mixins.mq("xlarge") {
+            display: block;
+        }
+    }
+
+    .searchbar {
+        width: 174px;
+
+        @include mixins.mq("large") {
+            width: 174px;
+        }
+
+        @include mixins.mq("xlarge") {
+            width: 240px;
+        }
+        height: 56px;
+        padding: 5px 15px;
+        align-self: stretch;
+        font-size: 14px;
+        border: variables.$border-grey 1px solid;
+        border-radius: 0px;
+
+        &:focus {
+            outline: none;
+            border: #5bc0de 1px solid;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6);
+        }
+        }
+
+    .phone {
+        display: flex;
+
+        @include mixins.mq("medium") {
+            display: none;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: variables.$btn-dark-grey;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+
+        .btn {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 0;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-right: 0;
+            line-height: 0.25;
+        }
+    }
+    }
+
+    .search-mobile {
+        padding-bottom: 0px;
+
+        .mobile-searchbar {
+            background-color: rgba(0, 0, 0, .1);
+            border: 2px solid rgba(0,0,0,.1);
+            border-right: none;
+            border-radius: 2px 0 0 2px;
+        }
+
+        .btn-search {
+            margin: 0;
+            background-color: rgba(0, 0, 0, .1);
+            border: 2px solid rgba(0,0,0,.1);
+            border-left: none;
+            color: variables.$dark-bg;
+            font-size: 20px;
+            border-radius: 0 2px 2px 0;
+            height: 40px;
+        }
+    }
 }
 
 .drop-down {
@@ -16,14 +259,12 @@
     }
 
     background-color: variables.$main-bg;
-    height: variables.$nav-height;
     width: 100%;
     overflow: visible;
     position: relative;
 
     .container,
     .row {
-        height: 100%;
         align-items: center;
     }
 
@@ -49,13 +290,9 @@
         'course':      variables.$panel-tomato,
     );
 
-    .development-drop,
-    .it-drop,
-    .marketing-drop,
-    .telecoms-drop,
-    .web-drop,
-    .security-drop,
-    .course-drop {
+
+
+    .drop {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -69,10 +306,13 @@
         line-height: 0.8;
         text-decoration: none;
         position: relative;
+        font-size: 1.125rem;
+        font-weight: 400;
+        padding: 20px 0;
 
         small {
             margin-top: variables.$space-xs;
-            font-size: 0.6rem;
+            font-size: 0.625rem;
             line-height: 1.5;
         }
 

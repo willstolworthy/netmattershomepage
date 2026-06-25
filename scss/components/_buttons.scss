@@ -23,6 +23,10 @@
     @include mixins.btn-variant(variables.$btn-grey, variables.$btn-grey-hover);
 }
 
+.btn-dark-grey {
+    @include mixins.btn-variant(variables.$btn-dark-grey, variables.$btn-dark-grey-hover);
+}
+
 .btn-blue {
     @include mixins.btn-variant(variables.$btn-blue, variables.$btn-blue-hover);
 }
