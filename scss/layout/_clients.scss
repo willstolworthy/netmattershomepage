@@ -2,11 +2,11 @@
 @use 'sass:map';
 
 .client-banner {
-    overflow: hidden;
+    overflow-x: clip;
     padding: variables.$space-lg 0;
 
     .clients {
-        display: inline-flex;
+        display: flex;
         flex-wrap: nowrap;
     }
 }

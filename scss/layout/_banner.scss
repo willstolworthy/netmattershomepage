@@ -4,7 +4,7 @@
 .banner-bg {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/banner-bg.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
     height: 550px;
@@ -21,9 +21,6 @@
 .banner-overlay {
     text-align: center;
     padding: 0 variables.$space-sm;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
 
     @include mixins.mq("medium") {
         text-align: left;

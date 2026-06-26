@@ -29,7 +29,7 @@
 
     .services-view-all {
         text-align: center;
-        font-size: 1.75rem;
+        font-size: 2.25rem;
         font-weight: 600;
         @include mixins.link-style-dark;
 
@@ -56,10 +56,10 @@
 
 @include mixins.mq("medium") {
     .service-card:nth-child(-n+3) { // first 3
-        grid-column: span 12;
+        grid-column: span 12; 
     }
 
-    .service-card:nth-child(n+4) {  // 4 and up
+    .service-card:nth-child(n+4) { // 4 and up
         grid-column: span 6;
     }
 }
@@ -70,17 +70,17 @@
     }
 
     .service-card:nth-child(n+4) {
-        grid-column: span 6;
+        grid-column: span 3;
     }
 }
 
-@include mixins.mq("xlarge") {
+@include mixins.mq("large") {
     .service-card:nth-child(-n+3) {
         grid-column: span 4;
     }
 
     .service-card:nth-child(n+4) {
-        grid-column: span 3;
+        grid-column: span 6;
     }
 }
 

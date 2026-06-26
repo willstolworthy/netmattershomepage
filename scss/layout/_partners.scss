@@ -5,7 +5,7 @@
     padding: variables.$space-xxl 0;
 
     .partners {
-        display: inline-flex;
+        display: flex;
         flex-wrap: nowrap;
 
         img {

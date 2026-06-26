@@ -468,7 +468,7 @@ template {
 }
 
 .icon-bullhorn:before {
-  content: "\e91c";
+  content: "\e91a";
 }
 
 .icon-local_grocery_store:before {
@@ -571,7 +571,7 @@ template {
 .banner-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner-bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
   height: 550px;
@@ -589,9 +589,6 @@ template {
 .banner-overlay {
   text-align: center;
   padding: 0 15px;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 @media (min-width: 768px) {
   .banner-overlay {
@@ -631,7 +628,7 @@ template {
 
 .basic {
   background-color: #fff;
-  overflow: hidden;
+  padding-bottom: 40px;
 }
 
 body {
@@ -685,7 +682,6 @@ body {
   background-color: #323544;
   color: #fff;
   padding-bottom: 50px;
-  overflow: hidden;
 }
 .about .welcome,
 .about .what-clients-think {
@@ -756,7 +752,6 @@ footer {
   position: relative;
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  overflow-x: hidden;
 }
 footer h4 {
   text-transform: uppercase;
@@ -796,7 +791,6 @@ footer h4 {
 
 .nm-img {
   width: 250px;
-  overflow: hidden;
 }
 @media (min-width: 992px) {
   .nm-img {
@@ -809,8 +803,9 @@ footer h4 {
 
 .socials-logos {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: start;
+  grid-template-columns: repeat(2, max-content);
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
   font-size: 1.625rem;
   text-align: center;
@@ -818,9 +813,12 @@ footer h4 {
 }
 @media (min-width: 992px) {
   .socials-logos {
-    display: flex;
-    flex-wrap: nowrap;
     width: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .socials-logos {
+    display: flex;
   }
 }
 .socials-logos a {
@@ -917,7 +915,6 @@ footer h4 {
 }
 
 .footer-copyright {
-  padding: 0 15px;
   width: 100%;
 }
 .footer-copyright .footer-br {
@@ -937,12 +934,17 @@ footer h4 {
   }
 }
 
+.footer-copyright {
+  padding: 0 15px;
+  width: 100%;
+}
+
 .client-banner {
-  overflow: hidden;
+  overflow-x: clip;
   padding: 30px 0;
 }
 .client-banner .clients {
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
 }
 
@@ -1029,7 +1031,7 @@ footer h4 {
   padding: 50px 0;
 }
 .partner-banner .partners {
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
 }
 .partner-banner .partners img {
@@ -1078,7 +1080,7 @@ footer h4 {
 }
 
 .services-headings .headings .left {
-  font-size: 2.7rem;
+  font-size: 2.75rem;
 }
 .services-headings .headings .right {
   font-size: 2.25rem;
@@ -1088,7 +1090,6 @@ footer h4 {
   color: #333645;
   padding: 10px 0 0;
   margin-bottom: 10px;
-  overflow: hidden;
 }
 @media (min-width: 768px) {
   .latest-news {
@@ -1286,7 +1287,7 @@ footer h4 {
 }
 .services .services-view-all {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 .services .services-view-all a {
@@ -1331,15 +1332,15 @@ footer h4 {
     grid-column: span 4;
   }
   .service-card:nth-child(n+4) {
-    grid-column: span 6;
+    grid-column: span 3;
   }
 }
-@media (min-width: 1260px) {
+@media (min-width: 992px) {
   .service-card:nth-child(-n+3) {
     grid-column: span 4;
   }
   .service-card:nth-child(n+4) {
-    grid-column: span 3;
+    grid-column: span 6;
   }
 }
 .service-card {
@@ -1621,6 +1622,7 @@ footer h4 {
 }
 .nav .row .nm-header-nav {
   flex: 1;
+  min-width: max-content;
   height: 68px;
 }
 @media (min-width: 768px) {
@@ -1713,6 +1715,11 @@ footer h4 {
 }
 .nav .row .searchbar {
   width: 174px;
+}
+@media (min-width: 992px) {
+  .nav .row .searchbar {
+    width: 174px;
+  }
 }
 @media (min-width: 1260px) {
   .nav .row .searchbar {
@@ -1999,7 +2006,7 @@ footer h4 {
 }
 .drop-down .drop-panel {
   position: absolute;
-  top: 100%;
+  top: 110px;
   left: 0;
   width: 100%;
   z-index: 3;

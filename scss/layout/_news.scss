@@ -34,7 +34,7 @@
 
 .services-headings .headings {
     .left {
-        font-size: 2.7rem;
+        font-size: 2.75rem;
     }
 
     .right {
@@ -46,7 +46,6 @@
     color: variables.$dark-text;
     padding: variables.$space-xs 0 0;
     margin-bottom: variables.$space-xs;
-    overflow: hidden;
 
     @include mixins.mq("medium") {
         position: relative;

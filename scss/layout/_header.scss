@@ -81,6 +81,7 @@
 
         .nm-header-nav {
             flex: 1;
+            min-width: max-content;
             height: 68px;
 
             @include mixins.mq("medium") {
@@ -173,6 +174,10 @@
 
     .searchbar {
         width: 174px;
+
+        @include mixins.mq("large") {
+            width: 174px;
+        }
 
         @include mixins.mq("xlarge") {
             width: 240px;
@@ -363,7 +368,7 @@
 
     .drop-panel {
         position: absolute;
-        top: 100%;
+        top: variables.$nav-height;
         left: 0;
         width: 100%;
         z-index: map.get(variables.$z-index, 'panel');
