@@ -719,6 +719,9 @@ body {
   margin: 0 0 25px;
   color: #a3a8ac;
 }
+.about b {
+  font-weight: 600;
+}
 .about h1 {
   font-size: 2.25rem;
   font-weight: 600;
@@ -1583,7 +1586,7 @@ footer h4 {
   width: 100%;
   height: 40px;
   padding: 5px 15px;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: #ccc 1px solid;
   border-radius: 3px;
 }
@@ -1640,7 +1643,7 @@ footer h4 {
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 5px 15px;
   border-radius: 3px;
   margin-left: 20px;
@@ -1733,7 +1736,7 @@ footer h4 {
   height: 56px;
   padding: 5px 15px;
   align-self: stretch;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: #ccc 1px solid;
   border-radius: 0px;
 }
@@ -1784,7 +1787,7 @@ footer h4 {
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-left: none;
   color: #212330;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-radius: 0 2px 2px 0;
   height: 40px;
 }
