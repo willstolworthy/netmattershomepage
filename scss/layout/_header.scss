@@ -321,7 +321,7 @@
         }
     }
 
-    // Hover Logic
+    // chooses colours, hover logic and triangles per category
 
     @each $name, $color in $drop-colors {
         .#{$name}-drop .icon {
@@ -329,7 +329,7 @@
         }
 
         .#{$name}-drop:hover,
-        &:has(.#{$name}-panel:hover) .#{$name}-drop {
+        &:has(.#{$name}-panel:hover) .#{$name}-drop { // when hovered
             background-color: $color;
             .icon { color: variables.$white; }
         }
@@ -343,7 +343,7 @@
         }
     }
 
-    @each $name, $color in $drop-colors {
+    @each $name, $color in $drop-colors { // triangle
         .#{$name}-drop:hover::after,
         &:has(.#{$name}-panel:hover) .#{$name}-drop::after {
             content: '';

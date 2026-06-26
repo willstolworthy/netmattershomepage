@@ -48,6 +48,8 @@
     }
 }
 
+// media query breakpoints ------- min-width up
+
 @mixin mq($break) {
     @if $break == "small" {
         @media (min-width: variables.$breakpoint-small) {

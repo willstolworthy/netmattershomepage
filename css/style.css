@@ -998,6 +998,9 @@ footer h4 {
   font-weight: 400;
   margin-top: 11px;
 }
+.client-item .client-label .btn:hover {
+  text-decoration: none;
+}
 .client-item .client-label::before {
   content: "";
   position: absolute;

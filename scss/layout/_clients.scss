@@ -2,7 +2,7 @@
 @use 'sass:map';
 
 .client-banner {
-    overflow-x: clip;
+    overflow-x: clip; // maybe should be hidden i prefer no scrollbar
     padding: variables.$space-lg 0;
 
     .clients {
@@ -65,6 +65,10 @@
             padding: 13px 15px;
             font-weight: 400;
             margin-top: 11px;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
 
         // transparent block to stay open on hover
