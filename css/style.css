@@ -468,7 +468,7 @@ template {
 }
 
 .icon-bullhorn:before {
-  content: "\e91a";
+  content: "\e91c";
 }
 
 .icon-local_grocery_store:before {
@@ -570,8 +570,8 @@ template {
 
 .banner-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner-bg.png");
-  background-size: 1910px 740px;
-  background-position: 20% center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 550px;
@@ -581,7 +581,7 @@ template {
 @media (min-width: 768px) {
   .banner-bg {
     background-image: linear-gradient(to right, #000, transparent 75%), url("../img/banner-bg.png");
-    background-size: auto, 1910px 740px;
+    background-size: auto, cover;
     background-position: left center;
   }
 }
@@ -589,6 +589,9 @@ template {
 .banner-overlay {
   text-align: center;
   padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .banner-overlay {
@@ -628,7 +631,7 @@ template {
 
 .basic {
   background-color: #fff;
-  padding-bottom: 40px;
+  overflow: hidden;
 }
 
 body {
@@ -682,6 +685,7 @@ body {
   background-color: #323544;
   color: #fff;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 .about .welcome,
 .about .what-clients-think {
@@ -692,7 +696,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .about .welcome,
   .about .what-clients-think {
     width: 50%;
@@ -752,6 +756,7 @@ footer {
   position: relative;
   font-size: 0.8125rem;
   line-height: 1.375rem;
+  overflow-x: hidden;
 }
 footer h4 {
   text-transform: uppercase;
@@ -791,6 +796,7 @@ footer h4 {
 
 .nm-img {
   width: 250px;
+  overflow: hidden;
 }
 @media (min-width: 992px) {
   .nm-img {
@@ -802,9 +808,9 @@ footer h4 {
 }
 
 .socials-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
   width: 100%;
   font-size: 1.625rem;
   text-align: center;
@@ -812,6 +818,8 @@ footer h4 {
 }
 @media (min-width: 992px) {
   .socials-logos {
+    display: flex;
+    flex-wrap: nowrap;
     width: 320px;
   }
 }
@@ -909,6 +917,7 @@ footer h4 {
 }
 
 .footer-copyright {
+  padding: 0 15px;
   width: 100%;
 }
 .footer-copyright .footer-br {
@@ -928,17 +937,12 @@ footer h4 {
   }
 }
 
-.footer-copyright {
-  padding: 0 15px;
-  width: 100%;
-}
-
 .client-banner {
-  overflow-x: clip;
+  overflow: hidden;
   padding: 30px 0;
 }
 .client-banner .clients {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
 }
 
@@ -1025,7 +1029,7 @@ footer h4 {
   padding: 50px 0;
 }
 .partner-banner .partners {
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
 }
 .partner-banner .partners img {
@@ -1074,7 +1078,7 @@ footer h4 {
 }
 
 .services-headings .headings .left {
-  font-size: 2.75rem;
+  font-size: 2.7rem;
 }
 .services-headings .headings .right {
   font-size: 2.25rem;
@@ -1084,6 +1088,7 @@ footer h4 {
   color: #333645;
   padding: 10px 0 0;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .latest-news {
@@ -1281,7 +1286,7 @@ footer h4 {
 }
 .services .services-view-all {
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 600;
 }
 .services .services-view-all a {
@@ -1322,6 +1327,14 @@ footer h4 {
   }
 }
 @media (min-width: 992px) {
+  .service-card:nth-child(-n+3) {
+    grid-column: span 4;
+  }
+  .service-card:nth-child(n+4) {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1260px) {
   .service-card:nth-child(-n+3) {
     grid-column: span 4;
   }
@@ -1608,7 +1621,6 @@ footer h4 {
 }
 .nav .row .nm-header-nav {
   flex: 1;
-  min-width: max-content;
   height: 68px;
 }
 @media (min-width: 768px) {
@@ -1701,11 +1713,6 @@ footer h4 {
 }
 .nav .row .searchbar {
   width: 174px;
-}
-@media (min-width: 992px) {
-  .nav .row .searchbar {
-    width: 174px;
-  }
 }
 @media (min-width: 1260px) {
   .nav .row .searchbar {
@@ -1992,7 +1999,7 @@ footer h4 {
 }
 .drop-down .drop-panel {
   position: absolute;
-  top: 110px;
+  top: 100%;
   left: 0;
   width: 100%;
   z-index: 3;

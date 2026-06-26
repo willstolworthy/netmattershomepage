@@ -5,6 +5,7 @@
     background-color: variables.$main-bg;
     color: variables.$white;
     padding-bottom: variables.$space-xxl;
+    overflow: hidden;
 
     .welcome,
     .what-clients-think {
@@ -15,7 +16,7 @@
         padding-left: variables.$space-sm;
         padding-right: variables.$space-sm;
 
-        @include mixins.mq("medium") {
+        @include mixins.mq("large") {
             width: 50%;
         }
     }
