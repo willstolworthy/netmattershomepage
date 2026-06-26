@@ -626,11 +626,6 @@ template {
   box-sizing: content-box;
 }
 
-.basic {
-  background-color: #fff;
-  padding-bottom: 40px;
-}
-
 body {
   margin: 0;
 }
@@ -1270,6 +1265,10 @@ footer h4 {
   color: #333645;
 }
 
+.services {
+  background-color: #fff;
+  padding-bottom: 40px;
+}
 @media (min-width: 768px) {
   .services {
     position: relative;

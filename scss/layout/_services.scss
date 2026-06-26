@@ -2,6 +2,9 @@
 @use '../utilities/mixins';
 
 .services {
+    background-color: variables.$white;
+    padding-bottom: variables.$space-xl;
+
     @include mixins.mq("medium") {
         position: relative;
     }
