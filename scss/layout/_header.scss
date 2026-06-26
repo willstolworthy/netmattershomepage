@@ -368,7 +368,7 @@
 
     .drop-panel {
         position: absolute;
-        top: variables.$nav-height;
+        top: 100%;
         left: 0;
         width: 100%;
         z-index: map.get(variables.$z-index, 'panel');

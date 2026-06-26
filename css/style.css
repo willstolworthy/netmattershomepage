@@ -468,7 +468,7 @@ template {
 }
 
 .icon-bullhorn:before {
-  content: "\e91a";
+  content: "\e91c";
 }
 
 .icon-local_grocery_store:before {
@@ -2006,7 +2006,7 @@ footer h4 {
 }
 .drop-down .drop-panel {
   position: absolute;
-  top: 110px;
+  top: 100%;
   left: 0;
   width: 100%;
   z-index: 3;
