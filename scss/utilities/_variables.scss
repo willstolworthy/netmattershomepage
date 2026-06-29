@@ -7,6 +7,18 @@ $dark-text: #333645;
 $main-bg: #323544;
 $dark-bg: #212330;
 
+$star-gold: #ffa500;
+
+$news-title-grey: #67809f;
+
+$border-grey: #ccc;
+
+$text-grey: #666;
+
+$quote-text: #a3a8ac;
+
+// Button Colours
+
 $btn-grey: #999aa2;
 $btn-grey-hover: #84858f;
 
@@ -24,16 +36,6 @@ $btn-purple-hover: #7e57a8;
 
 $btn-yellow: #f7b322;
 $btn-yellow-hover: #f7b322;
-
-$star-gold: #ffa500;
-
-$news-title-grey: #67809f;
-
-$border-grey: #ccc;
-
-$text-grey: #666;
-
-$quote-text: #a3a8ac;
 
 // Icon Colours
 
@@ -124,7 +126,7 @@ $panel-purple: #79539a;
 $panel-pink: #de093f;
 $panel-tomato: #a3331d;
 
-$panel-colors: (
+$panel-color-list: (
     1: $panel-grey,
     2: $panel-blue,
     3: $panel-green,

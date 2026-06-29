@@ -166,7 +166,7 @@
     background-color: variables.$icon-bg-tomato;
 }
 
-@each $index, $color in variables.$panel-colors {
+@each $index, $color in variables.$panel-color-list {
     .service-card:nth-child(#{$index}):hover {
         background-color: $color;
         .icon-bg {

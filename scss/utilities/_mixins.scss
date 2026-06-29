@@ -48,7 +48,7 @@
     }
 }
 
-// media query breakpoints ------- min-width up
+// media query breakpoints min-width up
 
 @mixin mq($break) {
     @if $break == "small" {

@@ -323,27 +323,27 @@
 
     // chooses colours, hover logic and triangles per category
 
-    @each $name, $color in $drop-colors {
-        .#{$name}-drop .icon {
+    @each $name, $color in $drop-colors { // sets icon to colour from map
+        .#{$name}-drop .icon { 
             color: $color;
         }
 
-        .#{$name}-drop:hover,
-        &:has(.#{$name}-panel:hover) .#{$name}-drop { // when hovered
+        .#{$name}-drop:hover, // when hovered colours of icon and background change
+        &:has(.#{$name}-panel:hover) .#{$name}-drop { // @has keeps panel open when hovered
             background-color: $color;
             .icon { color: variables.$white; }
         }
     }
 
-    @each $name, $panel-color in $panel-colors {
+    @each $name, $panel-color in $panel-colors { // when hovered panel becomes visible and coloured
         &:has(.#{$name}-drop:hover) .#{$name}-panel,
-        &:has(.#{$name}-panel:hover) .#{$name}-panel {
+        &:has(.#{$name}-panel:hover) .#{$name}-panel { // @has keeps panel open on hover
             display: block;
             background-color: $panel-color;
         }
     }
 
-    @each $name, $color in $drop-colors { // triangle
+    @each $name, $color in $drop-colors { // ::after pseudo element is shown
         .#{$name}-drop:hover::after,
         &:has(.#{$name}-panel:hover) .#{$name}-drop::after {
             content: '';
@@ -352,8 +352,8 @@
             left: 0;
             width: 100%;
             height: 35px;
-            background-color: $color;
-            clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+            background-color: $color; // same colour as icon/background
+            clip-path: polygon(0% 0%, 100% 0%, 50% 100%); // triangle pointing down
             z-index: map.get(variables.$z-index, 'triangle');
         }
     }
