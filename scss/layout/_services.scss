@@ -67,15 +67,6 @@
     }
 }
 
-@include mixins.mq("large") {
-    .service-card:nth-child(-n+3) {
-        grid-column: span 4;
-    }
-
-    .service-card:nth-child(n+4) {
-        grid-column: span 3;
-    }
-}
 
 @include mixins.mq("large") {
     .service-card:nth-child(-n+3) {
@@ -84,6 +75,16 @@
 
     .service-card:nth-child(n+4) {
         grid-column: span 6;
+    }
+}
+
+@include mixins.mq("xlarge") {
+    .service-card:nth-child(-n+3) {
+        grid-column: span 4;
+    }
+
+    .service-card:nth-child(n+4) {
+        grid-column: span 3;
     }
 }
 
@@ -140,6 +141,10 @@
 
 .icon-bg-grey, .btn-service-grey {
     background-color: variables.$icon-bg-grey;
+}
+
+.icon-bg-yellow, .btn-service-yellow {
+    background-color: variables.$icon-bg-yellow;
 }
 
 .icon-bg-blue, .btn-service-blue {

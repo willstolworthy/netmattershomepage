@@ -950,6 +950,7 @@ footer h4 {
   position: relative;
   flex-shrink: 0;
   padding: 0 20px;
+  margin: 0 20px;
 }
 .client-item img {
   height: 70px;
@@ -1042,6 +1043,7 @@ footer h4 {
   object-fit: contain;
   flex-shrink: 0;
   padding: 0 20px;
+  margin: 0 20px;
   filter: grayscale(100%);
 }
 .partner-banner .partners img:hover {
@@ -1337,15 +1339,15 @@ footer h4 {
     grid-column: span 4;
   }
   .service-card:nth-child(n+4) {
-    grid-column: span 3;
+    grid-column: span 6;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1260px) {
   .service-card:nth-child(-n+3) {
     grid-column: span 4;
   }
   .service-card:nth-child(n+4) {
-    grid-column: span 6;
+    grid-column: span 3;
   }
 }
 .service-card {
@@ -1397,6 +1399,10 @@ footer h4 {
 
 .icon-bg-grey, .btn-service-grey {
   background-color: #67809f;
+}
+
+.icon-bg-yellow, .btn-service-yellow {
+  background-color: #f7b322;
 }
 
 .icon-bg-blue, .btn-service-blue {
