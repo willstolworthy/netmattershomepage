@@ -110,11 +110,11 @@
 }
 
 .news3 {
-    @include mixins.mq("medium") {
+    @include mixins.mq("large") {
         display: none;
     }
 
-    @include mixins.mq("large") {
+    @include mixins.mq("xlarge") {
         display: block;
     }
 

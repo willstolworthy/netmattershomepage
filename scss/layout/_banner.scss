@@ -26,6 +26,10 @@
         text-align: left;
     }
 
+    @media (min-width: variables.$breakpoint-large) and (max-width: variables.$breakpoint-xlarge - 1px) {
+        text-align: center;
+    }
+
     h1 {
         color: variables.$white;
         font-weight: 600;

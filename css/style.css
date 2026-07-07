@@ -595,6 +595,11 @@ template {
     text-align: left;
   }
 }
+@media (min-width: 992px) and (max-width: 1259px) {
+  .banner-overlay {
+    text-align: center;
+  }
+}
 .banner-overlay h1 {
   color: #fff;
   font-weight: 600;
@@ -742,6 +747,12 @@ body {
     margin-bottom: 0;
   }
 }
+@media (min-width: 992px) and (max-width: 1260px) {
+  .about .btn.why-choose-us,
+  .about .btn.google {
+    margin-bottom: 17px;
+  }
+}
 
 footer {
   background-color: #323544;
@@ -780,7 +791,7 @@ footer h4 {
 }
 @media (min-width: 992px) {
   .socials {
-    flex: 0 0 400px;
+    flex: 0 0 350px;
   }
 }
 .socials h4 {
@@ -918,7 +929,7 @@ footer h4 {
 .footer-copyright .footer-br {
   display: block;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer-copyright .footer-br {
     display: none;
   }
@@ -926,7 +937,7 @@ footer h4 {
 .footer-copyright .footer-hyphen {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer-copyright .footer-hyphen {
     display: inline;
   }
@@ -1160,12 +1171,12 @@ footer h4 {
   transition: 0.5s ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .news3 {
     display: none;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1260px) {
   .news3 {
     display: block;
   }
@@ -1597,8 +1608,9 @@ footer h4 {
 }
 .nav .search-mobile .mobile-searchbar:focus {
   outline: none;
-  border: #5bc0de 1px solid;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+  border: #ccc 2px solid;
+  border-right: 0px;
+  box-shadow: none;
 }
 .nav .row {
   height: 68px;
@@ -1785,6 +1797,7 @@ footer h4 {
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-right: none;
   border-radius: 2px 0 0 2px;
+  margin-right: -1px;
 }
 .nav .search-mobile .btn-search {
   margin: 0;
@@ -1813,18 +1826,16 @@ footer h4 {
 }
 .drop-down .container,
 .drop-down .row {
-  align-items: center;
+  align-items: stretch;
 }
 .drop-down .drop {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   text-align: center;
   color: #fff;
-  max-height: 100%;
   text-transform: uppercase;
   line-height: 0.8;
   text-decoration: none;

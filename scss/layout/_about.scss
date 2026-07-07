@@ -79,4 +79,11 @@
             margin-bottom: 0;
         }
     }
+
+    @media (min-width: variables.$breakpoint-large) and (max-width: variables.$breakpoint-xlarge) {
+        .btn.why-choose-us,
+        .btn.google {
+            margin-bottom: 17px;
+        }
+    }
 }
