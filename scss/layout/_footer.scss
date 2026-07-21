@@ -1,5 +1,6 @@
 @use '../utilities/variables';
 @use '../utilities/mixins';
+@use 'sass:math';
 
 footer {
     background-color: variables.$main-bg;
@@ -20,14 +21,14 @@ footer {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 0 variables.$space-sm;
 
-    @include mixins.mq("medium") {
-        padding: 0;
+    @include mixins.mq("xlarge") {
+        flex-direction: row;
+        gap: 0 variables.$space-lg;
     }
 
-    @include mixins.mq("large") {
-        flex-direction: row;
+    .row {
+        column-gap: variables.$space-lg;
     }
 }
 
@@ -35,7 +36,7 @@ footer {
     display: flex;
     flex-direction: column;
 
-    @include mixins.mq("large") {
+    @include mixins.mq("xlarge") {
         flex: 0 0 350px;
     }
 
@@ -111,11 +112,11 @@ footer {
     margin-bottom: variables.$space-lg;
 
     @include mixins.mq("medium") {
-        flex: 50%;
+        flex-basis: calc(50% - #{math.div(variables.$space-lg, 2)});
     }
 
     @include mixins.mq("large") {
-        flex: 25%;
+        flex-basis: calc(25% - #{math.div(variables.$space-lg * 3, 4)});
     }
 
     @include mixins.mq("xlarge") {
@@ -157,10 +158,4 @@ footer {
             display: inline;
         }
     }
-}
-
-
-.footer-copyright {
-    padding: 0 15px;
-    width: 100%;
 }

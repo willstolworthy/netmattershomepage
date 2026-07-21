@@ -51,14 +51,6 @@
         position: relative;
         margin-bottom: variables.$space-xxl;
     }
-
-    .left {
-        padding-left: variables.$space-sm;
-
-        @include mixins.mq("medium") {
-            padding-left: 0;
-        }
-    }
 }
 
 .news-view-all {
@@ -81,21 +73,10 @@
 .news-card {
     flex: 1;
     min-width: 0;
-    margin: 0 variables.$space-sm;
     position: relative;
     box-shadow: variables.$box-shadow;
     top: 0;
     transition: variables.$transition;
-
-    @include mixins.mq("medium") {
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
 
     img {
         width: 100%;
@@ -110,7 +91,7 @@
 }
 
 .news3 {
-    @include mixins.mq("large") {
+    @include mixins.mq("medium") {
         display: none;
     }
 
@@ -135,7 +116,7 @@
 
         @include mixins.mq("medium") {
             flex-direction: row;
-            gap: 0;
+            gap: 0 variables.$space-lg;
         }
     }
 

@@ -20,14 +20,9 @@
 
 .banner-overlay {
     text-align: center;
-    padding: 0 variables.$space-sm;
 
-    @include mixins.mq("medium") {
+    @include mixins.mq("large") {
         text-align: left;
-    }
-
-    @media (min-width: variables.$breakpoint-large) and (max-width: variables.$breakpoint-xlarge - 1px) {
-        text-align: center;
     }
 
     h1 {

@@ -6,17 +6,23 @@
     color: variables.$white;
     padding-bottom: variables.$space-xxl;
 
+    .row {
+        gap: variables.$space-lg 0;
+
+        @include mixins.mq("large") {
+            gap: 0 variables.$space-lg;
+        }
+    }
+
     .welcome,
     .what-clients-think {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
-        padding-left: variables.$space-sm;
-        padding-right: variables.$space-sm;
 
         @include mixins.mq("large") {
-            width: 50%;
+            width: calc(50% - #{variables.$space-sm});
         }
     }
 

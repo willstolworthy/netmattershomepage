@@ -25,7 +25,7 @@
 
     .search-mobile {
         display: flex;
-        padding: 10px 15px;
+        padding: 10px 0;
 
         @include mixins.mq("medium") {
             display: none;
@@ -55,11 +55,6 @@
 
         @include mixins.mq("medium") {
             height: variables.$nav-height;
-        }
-
-        .nm-header-logo,
-        .nm-header-nav {
-            padding: 0 15px;
         }
 
         .nm-header-logo {

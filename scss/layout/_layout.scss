@@ -1,4 +1,5 @@
 @use '../utilities/mixins';
+@use '../utilities/variables';
 
 body {
     margin: 0;
@@ -12,6 +13,8 @@ body {
 .container {
     margin-right: auto;
     margin-left: auto;
+    padding-right: variables.$space-sm;
+    padding-left: variables.$space-sm;
     width: 100%;
 
     @include mixins.mq("medium") {
