@@ -568,8 +568,48 @@ template {
   background-color: #f7b322;
 }
 
-.banner-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner-bg.png");
+.banner-carousel .slick-dots {
+  bottom: 20px;
+}
+.banner-carousel .slick-dots li {
+  width: 20px;
+  height: 20px;
+  margin: 0 6px;
+}
+.banner-carousel .slick-dots li button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  transition: background-color 0.5s ease;
+}
+.banner-carousel .slick-dots li:not(.slick-active) button:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.banner-carousel .slick-dots li.slick-active button::before {
+  width: 11px;
+  height: 12px;
+  background-color: #fff;
+}
+.banner-carousel .slick-dots li.slick-active button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.banner-carousel .banner-slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--banner-bg-image);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -579,11 +619,39 @@ template {
   align-items: center;
 }
 @media (min-width: 768px) {
-  .banner-bg {
-    background-image: linear-gradient(to right, #000, transparent 75%), url("../img/banner-bg.png");
+  .banner-carousel .banner-slide {
+    background-image: linear-gradient(to right, #000, transparent 75%), var(--banner-bg-image);
     background-size: auto, cover;
     background-position: left center;
   }
+}
+
+.banner-slide-0 {
+  --banner-bg-image: url('../img/banner-bg0.png');
+}
+
+.banner-slide-1 {
+  --banner-bg-image: url('../img/banner-bg1.jpeg');
+}
+
+.banner-slide-2 {
+  --banner-bg-image: url('../img/banner-bg2.png');
+}
+
+.banner-slide-3 {
+  --banner-bg-image: url('../img/banner-bg3.png');
+}
+
+.banner-slide-4 {
+  --banner-bg-image: url('../img/banner-bg4.png');
+}
+
+.banner-slide-5 {
+  --banner-bg-image: url('../img/banner-bg5.jpeg');
+}
+
+.banner-slide-6 {
+  --banner-bg-image: url('../img/banner-bg6.png');
 }
 
 .banner-overlay {

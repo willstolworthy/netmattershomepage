@@ -1,20 +1,75 @@
 @use '../utilities/variables';
 @use '../utilities/mixins';
 
-.banner-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/banner-bg.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 550px;
-    display: flex;
-    align-items: center;
+.banner-carousel {
+    .slick-dots {
+        bottom: variables.$space-md;
 
-    @include mixins.mq("medium") {
-        background-image: linear-gradient(to right, variables.$black, transparent 75%), url('../img/banner-bg.png');
-        background-size: auto, cover;
-        background-position: left center;
+        li {
+            width: 20px;
+            height: 20px;
+            margin: 0 6px;
+
+            button::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 11px;
+                height: 11px;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: rgba(variables.$white, 0.4);
+                opacity: 1;
+                transition: background-color variables.$transition;
+            }
+
+            &:not(.slick-active) button:hover::before { // darker on hover
+                background-color: rgba(variables.$black, 0.5);
+            }
+
+            &.slick-active button { // active dot with outline
+                &::before {
+                    width: 11px;
+                    height: 12px;
+                    background-color: variables.$white;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid variables.$white;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .banner-slide {
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--banner-bg-image);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 550px;
+        display: flex;
+        align-items: center;
+
+        @include mixins.mq("medium") {
+            background-image: linear-gradient(to right, variables.$black, transparent 75%), var(--banner-bg-image);
+            background-size: auto, cover;
+            background-position: left center;
+        }
+    }
+}
+
+@each $index, $file in variables.$banner-slide-images { // gives each slide its image
+    .banner-slide-#{$index} {
+        --banner-bg-image: url('../img/#{$file}');
     }
 }
 
