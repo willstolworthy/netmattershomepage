@@ -84,11 +84,17 @@ $z-index: (
     'tooltip': 2,
     'panel': 3,
     'triangle': 4,
+    'sidebar-backdrop': 9,
+    'sidebar': 10,
 );
 
 // Nav
 
 $nav-height: 110px;
+
+// Sidebar
+
+$sidebar-width: 350px;
 
 // Media Query Breakpoints
 
