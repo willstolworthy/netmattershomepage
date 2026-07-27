@@ -1,10 +1,7 @@
 @use '../utilities/variables';
+@use '../utilities/mixins';
 @use 'sass:map';
 
-// The sidebar sits behind the page (z-index: -1), so the page needs an opaque
-// background to hide it when closed. html gets one too, otherwise body's
-// background propagates to the canvas (which paints below the sidebar) and the
-// body's own box would stay transparent.
 html {
     overflow-x: hidden;
     background-color: variables.$white;
@@ -21,11 +18,15 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: variables.$sidebar-width;
+    width: variables.$sidebar-width-mobile;
     height: 100%;
     background-color: variables.$dark-text;
     z-index: -1;
     overflow-y: auto;
+
+    @include mixins.mq("medium") {
+        width: variables.$sidebar-width;
+    }
 }
 
 .sidebar-overlay {
@@ -39,7 +40,11 @@ body {
 }
 
 body.sidebar-open {
-    left: -#{variables.$sidebar-width};
+    left: -#{variables.$sidebar-width-mobile};
+
+    @include mixins.mq("medium") {
+        left: -#{variables.$sidebar-width};
+    }
 
     .sidebar-overlay {
         opacity: 1;
@@ -65,7 +70,8 @@ body.sidebar-open {
     }
 }
 
-.sidebar .sidebar-sub {
+.sidebar .sidebar-sub,
+.sidebar .sidebar-service {
     position: relative;
     display: flex;
     align-items: center;
@@ -90,4 +96,28 @@ body.sidebar-open {
 .sidebar .sidebar-icon {
     font-size: 12px;
     padding-right: 20px;
+}
+
+
+.sidebar .mobile-only {
+    height: auto;
+    margin: variables.$space-md;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sidebar-mobile-service {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    text-transform: uppercase;
+    color: variables.$white;
+    font-size: 14px;
+    padding-left: 20px;
+    border-top: 1px solid rgba(0,0,0,.25);
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
 }

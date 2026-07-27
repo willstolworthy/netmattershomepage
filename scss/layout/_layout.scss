@@ -37,3 +37,11 @@ body {
 
     @include mixins.link-style-full;
 }
+
+// Marks content that only belongs on mobile, where the extra space taken up is
+// worth it. Hidden from the medium breakpoint up.
+.mobile-only {
+    @include mixins.mq("medium") {
+        display: none;
+    }
+}
