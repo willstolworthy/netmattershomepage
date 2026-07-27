@@ -2193,8 +2193,7 @@ body.sidebar-open .sidebar-overlay {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-.sidebar .sidebar-sub,
-.sidebar .sidebar-service {
+.sidebar .sidebar-sub {
   position: relative;
   display: flex;
   align-items: center;
@@ -2226,22 +2225,89 @@ body.sidebar-open .sidebar-overlay {
   margin: 20px;
   justify-content: center;
   text-align: center;
-  text-decoration: none;
 }
 
 .sidebar-mobile-service {
   position: relative;
   display: flex;
   align-items: center;
-  height: 55px;
+  justify-content: center;
+  height: auto;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
   color: #fff;
-  font-size: 14px;
-  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.sidebar-mobile-list {
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.sidebar-mobile-button {
+  margin: 20px 0;
+}
+
+.sidebar-mobile-button a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 0.8;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 20px 0;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 3px;
+}
+.sidebar-mobile-button a small {
+  margin-top: 10px;
+  font-size: 0.625rem;
+  line-height: 1.5;
+}
+.sidebar-mobile-button a .icon {
+  font-size: 1.4rem;
+}
+
+.sidebar-mobile-button .development-drop .icon {
+  color: #67809f;
+}
+
+.sidebar-mobile-button .it-drop .icon {
+  color: #4183d7;
+}
+
+.sidebar-mobile-button .marketing-drop .icon {
+  color: #2ecc71;
+}
+
+.sidebar-mobile-button .telecoms-drop .icon {
+  color: #d64541;
+}
+
+.sidebar-mobile-button .web-drop .icon {
+  color: #926fb1;
+}
+
+.sidebar-mobile-button .security-drop .icon {
+  color: #f62459;
+}
+
+.sidebar-mobile-button .course-drop .icon {
+  color: #ce4125;
 }
 
 /*# sourceMappingURL=style.css.map */

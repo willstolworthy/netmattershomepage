@@ -70,8 +70,7 @@ body.sidebar-open {
     }
 }
 
-.sidebar .sidebar-sub,
-.sidebar .sidebar-service {
+.sidebar .sidebar-sub {
     position: relative;
     display: flex;
     align-items: center;
@@ -98,26 +97,84 @@ body.sidebar-open {
     padding-right: 20px;
 }
 
-
 .sidebar .mobile-only {
     height: auto;
     margin: variables.$space-md;
     justify-content: center;
     text-align: center;
-    text-decoration: none;
 }
 
 .sidebar-mobile-service {
     position: relative;
     display: flex;
     align-items: center;
-    height: 55px;
+    justify-content: center;
+    height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, .25);
     text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
     color: variables.$white;
-    font-size: 14px;
-    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: variables.$space-xs;
     border-top: 1px solid rgba(0,0,0,.25);
     border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.sidebar-mobile-list {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+// Block-level, so the 20px margins of two stacked buttons collapse into a
+// single 20px gap rather than adding up to 40px
+.sidebar-mobile-button {
+    margin: variables.$space-md 0;
+}
+
+.sidebar-mobile-button a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    color: variables.$white;
+    text-transform: uppercase;
+    line-height: 0.8;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 20px 0;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    border-radius: 3px;
+
+    small {
+        margin-top: variables.$space-xs;
+        font-size: 0.625rem;
+        line-height: 1.5;
+    }
+
+    .icon {
+        font-size: 1.4rem;
+    }
+}
+
+$sidebar-button-colors: (
+    'development': variables.$icon-bg-grey,
+    'it':          variables.$icon-bg-blue,
+    'marketing':   variables.$icon-bg-green,
+    'telecoms':    variables.$icon-bg-red,
+    'web':         variables.$icon-bg-purple,
+    'security':    variables.$icon-bg-pink,
+    'course':      variables.$icon-bg-tomato,
+);
+
+@each $name, $color in $sidebar-button-colors {
+    .sidebar-mobile-button .#{$name}-drop .icon {
+        color: $color;
+    }
 }
