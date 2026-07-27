@@ -43,3 +43,11 @@ body {
         display: none;
     }
 }
+
+.desktop-only {
+    display: none;
+
+    @include mixins.mq("medium") {
+        display: block;
+    }
+}
