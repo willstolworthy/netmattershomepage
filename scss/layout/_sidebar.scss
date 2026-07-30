@@ -4,6 +4,8 @@
 
 html {
     overflow-x: hidden;
+    // reserve the scrollbar space so nothing shifts when scrolling is locked
+    scrollbar-gutter: stable;
     background-color: variables.$white;
 }
 
@@ -37,6 +39,10 @@ body {
     visibility: hidden;
     transition: opacity variables.$transition, visibility variables.$transition;
     z-index: map.get(variables.$z-index, 'sidebar-backdrop');
+}
+
+html.sidebar-open {
+    overflow: hidden;
 }
 
 body.sidebar-open {

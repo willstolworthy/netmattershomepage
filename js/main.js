@@ -13,13 +13,14 @@ $(document).ready(function(){
     });
 
     // sidebar toggle
+    // html gets the class too so the page scroll can be locked while it's open
     $('.hamburger').on('click', function(){
-        $('body').toggleClass('sidebar-open');
+        $('html, body').toggleClass('sidebar-open');
     });
 
     // close sidebar when clicking the overlay
     $('.sidebar-overlay').on('click', function(){
-        $('body').removeClass('sidebar-open');
+        $('html, body').removeClass('sidebar-open');
     });
 
     // sticky header

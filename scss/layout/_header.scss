@@ -2,7 +2,7 @@
 @use '../utilities/mixins';
 @use 'sass:map';
 
-// sticks to the top, slides out of view when scrolling down
+// sticks to the top
 
 .header {
     position: sticky;
@@ -233,6 +233,22 @@
             font-size: 2.5rem;
             margin-right: 0;
             line-height: 0.25;
+            transition: transform variables.$transition, opacity variables.$transition;
+        }
+
+        body.sidebar-open & {
+            .icon:first-child {
+                transform: translateY(0.25em) rotate(45deg);
+            }
+
+            .icon:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            .icon:last-child {
+                transform: translateY(-0.25em) rotate(-45deg);
+            }
         }
     }
     }

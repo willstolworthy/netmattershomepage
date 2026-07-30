@@ -1857,6 +1857,17 @@ footer h4 {
   font-size: 2.5rem;
   margin-right: 0;
   line-height: 0.25;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+body.sidebar-open .nav .row .hamburger .icon:first-child {
+  transform: translateY(0.25em) rotate(45deg);
+}
+body.sidebar-open .nav .row .hamburger .icon:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+body.sidebar-open .nav .row .hamburger .icon:last-child {
+  transform: translateY(-0.25em) rotate(-45deg);
 }
 .nav .search-mobile {
   padding-bottom: 0px;
@@ -2147,6 +2158,7 @@ footer h4 {
 
 html {
   overflow-x: hidden;
+  scrollbar-gutter: stable;
   background-color: #fff;
 }
 
@@ -2181,6 +2193,10 @@ body {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   z-index: 9;
+}
+
+html.sidebar-open {
+  overflow: hidden;
 }
 
 body.sidebar-open {
