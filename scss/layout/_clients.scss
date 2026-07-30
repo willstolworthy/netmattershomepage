@@ -5,17 +5,33 @@
     overflow-x: clip; // maybe should be hidden i prefer no scrollbar
     padding: variables.$space-lg 0;
 
-    .clients {
+    // keeps the logos on one row until slick swaps in its own markup
+    .clients:not(.slick-initialized) {
         display: flex;
         flex-wrap: nowrap;
+    }
+
+    // slick hides both axes on the list which cuts the labels off,
+    // clip lets the other axis stay visible where hidden would not
+    .slick-list {
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+
+    // beats slicks own `.slick-initialized .slick-slide { display: block }`
+    // so a logo that has been scaled down still sits in the middle
+    .slick-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
     }
 }
 
 .client-item {
     position: relative;
-    flex-shrink: 0;
-    padding: 0 variables.$space-md;
-    margin: 0 20px;
+    flex-shrink: 0; // stops the pre slick row squashing the logos
+    padding: 0 variables.$logo-gap * 0.5; // same either side of every logo so the gaps match
 
     img {
         height: 70px;

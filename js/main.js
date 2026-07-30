@@ -12,6 +12,32 @@ $(document).ready(function(){
         swipeToSlide: true,
     });
 
+    // logo banners
+    $('.partners, .clients').slick({
+        infinite: true,
+        speed: 600,
+        variableWidth: true, // sizes each slide to its own logo so the gaps stay even
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2800, // waits between each slide instead of scrolling non stop
+        arrows: false,
+        dots: false,
+        pauseOnHover: true, // so the labels can be read
+        swipe: false,
+        draggable: false,
+        responsive: [ // breakpoints
+            { breakpoint: 1260, settings: { slidesToShow: 6 } },
+            { breakpoint: 992, settings: { slidesToShow: 5 } },
+            { breakpoint: 768, settings: { slidesToShow: 3 } },
+        ],
+    });
+
+    // variableWidth measures the slides so it has to remeasure once the logos load
+    $(window).on('load', function(){
+        $('.partners, .clients').slick('setPosition');
+    });
+
     // sidebar toggle
     // html gets the class too so the page scroll can be locked while it's open
     $('.hamburger').on('click', function(){
