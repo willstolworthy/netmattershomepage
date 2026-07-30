@@ -2158,7 +2158,6 @@ body.sidebar-open .nav .row .hamburger .icon:last-child {
 
 html {
   overflow-x: hidden;
-  scrollbar-gutter: stable;
   background-color: #fff;
 }
 

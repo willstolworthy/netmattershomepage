@@ -4,8 +4,6 @@
 
 html {
     overflow-x: hidden;
-    // reserve the scrollbar space so nothing shifts when scrolling is locked
-    scrollbar-gutter: stable;
     background-color: variables.$white;
 }
 
