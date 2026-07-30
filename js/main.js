@@ -42,4 +42,25 @@ $(document).ready(function(){
 
         lastScroll = current;
     });
+
+    // cookies popup
+    var $cookies = $('.cookies-overlay');
+
+    try {
+        if (localStorage.getItem('cookiesAccepted') !== 'true') {
+            $cookies.addClass('cookies-open');
+        }
+    } catch (e) {
+        // storage blocked show it anyway
+        $cookies.addClass('cookies-open');
+    }
+
+    $('.cookies-accept').on('click', function(){
+        try {
+            localStorage.setItem('cookiesAccepted', 'true');
+        } catch (e) {
+            // still let them through
+        }
+        $cookies.removeClass('cookies-open');
+    });
 });

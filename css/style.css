@@ -523,6 +523,7 @@ template {
   text-decoration: none;
   color: #fff;
   margin-bottom: 15px;
+  border: 0;
 }
 @media (min-width: 768px) {
   .btn {
@@ -2337,6 +2338,8 @@ body.sidebar-open .sidebar-overlay {
   justify-content: center;
   padding: 20px;
   z-index: 11;
+  opacity: 0;
+  visibility: hidden;
 }
 .cookies-overlay::before {
   content: "";
@@ -2344,6 +2347,10 @@ body.sidebar-open .sidebar-overlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
+}
+.cookies-overlay.cookies-open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .cookies {
