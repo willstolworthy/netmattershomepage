@@ -38,8 +38,10 @@ body {
     @include mixins.link-style-full;
 }
 
+// switches at large to line up with the drop-down menu appearing
+
 .mobile-only {
-    @include mixins.mq("medium") {
+    @include mixins.mq("large") {
         display: none;
     }
 }
@@ -47,7 +49,7 @@ body {
 .desktop-only {
     display: none;
 
-    @include mixins.mq("medium") {
+    @include mixins.mq("large") {
         display: block;
     }
 }

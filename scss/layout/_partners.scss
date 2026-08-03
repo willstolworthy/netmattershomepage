@@ -4,14 +4,13 @@
     overflow: hidden;
     padding: variables.$space-xxl 0;
 
-    // keeps the logos on one row until slick swaps in its own markup
+    // keeps the logos on one row until slick
     .partners:not(.slick-initialized) {
         display: flex;
         flex-wrap: nowrap;
     }
 
-    // beats slicks own `.slick-initialized .slick-slide { display: block }`
-    // so a logo that has been scaled down still sits in the middle
+    // replaces slick display: block
     .slick-slide {
         display: flex;
         align-items: center;
@@ -21,8 +20,8 @@
 }
 
 .partner-item {
-    flex-shrink: 0; // stops the pre slick row squashing the logos
-    padding: 0 variables.$logo-gap * 0.5; // same either side of every logo so the gaps match
+    flex-shrink: 0;
+    padding: 0 variables.$logo-gap * 0.5;
 
     img {
         height: 70px;

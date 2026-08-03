@@ -90,4 +90,9 @@ $(document).ready(function(){
         }
         $cookies.removeClass('cookies-open');
     });
+
+    // change settings just closes it, nothing is saved so it comes back next visit
+    $('.cookies-settings').on('click', function(){
+        $cookies.removeClass('cookies-open');
+    });
 });

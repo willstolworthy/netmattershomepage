@@ -747,7 +747,7 @@ body {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mobile-only {
     display: none;
   }
@@ -756,7 +756,7 @@ body {
 .desktop-only {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .desktop-only {
     display: block;
   }
@@ -2195,7 +2195,7 @@ body {
   z-index: -1;
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .sidebar {
     width: 350px;
   }
@@ -2218,7 +2218,7 @@ html.sidebar-open {
 body.sidebar-open {
   left: -275px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   body.sidebar-open {
     left: -350px;
   }
@@ -2241,7 +2241,9 @@ body.sidebar-open .sidebar-overlay {
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
-.sidebar .sidebar-header:hover {
+
+.sidebar .sidebar-header:hover,
+.sidebar .sidebar-header:has(~ .sidebar-sub:hover):not(:has(~ .sidebar-header ~ .sidebar-sub:hover)) {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -2265,6 +2267,12 @@ body.sidebar-open .sidebar-overlay {
   position: absolute;
   inset: 0;
   cursor: pointer;
+}
+.sidebar .sidebar-header .sidebar-link:focus,
+.sidebar .sidebar-sub .sidebar-link:focus {
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
 }
 
 .sidebar .sidebar-icon {
