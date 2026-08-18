@@ -595,7 +595,7 @@ template {
   transition: background-color 0.5s ease;
 }
 .banner-carousel .slick-dots li:not(.slick-active) button:hover::before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
 }
 .banner-carousel .slick-dots li.slick-active button::before {
   width: 11px;

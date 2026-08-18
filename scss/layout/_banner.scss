@@ -24,8 +24,8 @@
                 transition: background-color variables.$transition;
             }
 
-            &:not(.slick-active) button:hover::before { // darker on hover
-                background-color: rgba(variables.$black, 0.5);
+            &:not(.slick-active) button:hover::before { // lighter on hover
+                background-color: variables.$white;
             }
 
             &.slick-active button { // active dot with outline
