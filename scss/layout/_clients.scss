@@ -5,16 +5,19 @@
     overflow-x: clip; // maybe should be hidden i prefer no scrollbar
     padding: variables.$space-lg 0;
 
+    // whole banner has to be raised over the news card links above
+    position: relative;
+    z-index: map.get(variables.$z-index, 'tooltip');
+
     // keeps the logos on one row until slick
     .clients:not(.slick-initialized) {
         display: flex;
         flex-wrap: nowrap;
     }
 
-    // slick hides the labels without
+
     .slick-list {
-        overflow-x: clip;
-        overflow-y: visible;
+        overflow: visible;
     }
 
     // replaces slick display: block
