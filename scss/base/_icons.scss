@@ -1,45 +1,45 @@
 @use '../utilities/variables';
 
 .icon-facebook:before {
-    content: "\ea90";
+  content: "\ea90";
 }
 .icon-linkedin2:before {
-    content: "\eaca";
+  content: "\eaca";
 }
 .icon-x:before {
-    content: "\e901";
+  content: "\e913";
 }
 .icon-instagram:before {
-    content: "\ea92";
+  content: "\ea92";
 }
 
 .icon-star-full:before {
-    content: "\e9d9";
+  content: "\e9d9";
     color: variables.$star-gold;
 }
 
 .icon-arrow-right2:before {
-    content: "\ea3c";
+  content: "\ea3c";
 }
 
 .icon-cogs:before {
-  content: "\e906";
+  content: "\e918";
 }
 
 .icon-bar-graph:before {
-  content: "\e904";
+  content: "\e916";
 }
 
 .icon-security:before {
-  content: "\e905";
+  content: "\e917";
 }
 
 .icon-school:before {
-  content: "\e902";
+  content: "\e914";
 }
 
 .icon-phone_in_talk:before {
-  content: "\e903";
+  content: "\e915";
 }
 
 .icon-display:before {
@@ -55,27 +55,27 @@
 }
 
 .icon-handshake-o:before {
-  content: "\e90d";
+  content: "\e91f";
 }
 
 .icon-cloud-download:before {
-  content: "\e90b";
+  content: "\e91d";
 }
 
 .icon-download:before {
-  content: "\e908";
+  content: "\e91a";
 }
 
 .icon-briefcase:before {
-  content: "\e909";
+  content: "\e91b";
 }
 
 .icon-laptop_mac:before {
-  content: "\e90c";
+  content: "\e91e";
 }
 
 .icon-group:before {
-  content: "\e90a";
+  content: "\e91c";
 }
 
 .icon-mobile:before {
@@ -87,7 +87,7 @@
 }
 
 .icon-folder-open:before {
-  content: "\e930";
+  content: "\e932";
 }
 
 .icon-earth:before {
@@ -95,31 +95,31 @@
 }
 
 .icon-transfer:before {
-  content: "\e907";
+  content: "\e919";
 }
 
 .icon-headphones:before {
-  content: "\e911";
+  content: "\e923";
 }
 
 .icon-hard-drive:before {
-  content: "\e90e";
+  content: "\e920";
 }
 
 .icon-dollar:before {
-  content: "\e90f";
+  content: "\e921";
 }
 
 .icon-email:before {
-  content: "\e910";
+  content: "\e922";
 }
 
 .icon-create:before {
-  content: "\e913";
+  content: "\e925";
 }
 
 .icon-line-chart:before {
-  content: "\e912";
+  content: "\e924";
 }
 
 .icon-search:before {
@@ -127,7 +127,7 @@
 }
 
 .icon-phone:before {
-  content: "\e914";
+  content: "\e926";
 }
 
 .icon-ticket:before {
@@ -135,31 +135,31 @@
 }
 
 .icon-dashboard:before {
-  content: "\e915";
+  content: "\e927";
 }
 
 .icon-phone1:before {
-  content: "\e916";
+  content: "\e904";
 }
 
 .icon-bullhorn:before {
-  content: "\e91d";
+  content: "\e92f";
 }
 
 .icon-local_grocery_store:before {
-  content: "\e917";
+  content: "\e929";
 }
 
 .icon-https:before {
-  content: "\e919";
+  content: "\e92b";
 }
 
 .icon-access_time:before {
-  content: "\e918";
+  content: "\e92a";
 }
 
 .icon-files-empty:before {
-  content: "\e925";
+  content: "\e931";
 }
 
 .icon-lab:before {
@@ -167,21 +167,25 @@
 }
 
 .icon-help:before {
-  content: "\e91a";
+  content: "\e92c";
 }
 
 .icon-paperplane:before {
-  content: "\e91c";
+  content: "\e92e";
 }
 
 .icon-mouse:before {
-  content: "\e91b";
+  content: "\e92d";
 }
 
 .icon-minus:before {
-  content: "\e91e";
+  content: "\e90e";
 }
 
 .icon-chevrons-right:before {
+  content: "\e908";
+}
+
+.icon-chevron-down:before {
   content: "\e900";
 }

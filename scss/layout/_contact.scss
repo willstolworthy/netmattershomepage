@@ -1,0 +1,190 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.contact {
+    margin-bottom: 50px;
+
+    .row {
+        flex-direction: column;
+        gap: variables.$space-lg;
+
+        @include mixins.mq("medium") {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+.contact-form {
+    min-width: 0;
+    background-color: variables.$form-bg;
+    padding: variables.$space-lg;
+
+    @include mixins.mq("medium") {
+        flex: 0 1 calc((100% - #{variables.$space-lg}) * 2 / 3);
+    }
+
+    label {
+        display: block;
+        color: variables.$dark-text;
+        font-size: .875rem;
+        font-weight: 600;
+        margin-bottom: variables.$space-xs;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 5px 15px;
+        font-size: .875rem;
+        background-color: variables.$white;
+        border: variables.$border-grey 1px solid;
+        border-radius: 0;
+
+        &:focus {
+            outline: none;
+            border: #5bc0de 1px solid;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6);
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        height: 44px;
+    }
+
+    textarea {
+        height: 110px;
+        padding-top: variables.$space-xs;
+        resize: vertical;
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0 variables.$space-md;
+    margin-bottom: variables.$space-md;
+
+    @include mixins.mq("medium") {
+        flex-direction: row;
+    }
+}
+
+.form-field {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: variables.$space-md;
+
+    @include mixins.mq("medium") {
+        margin-bottom: 0;
+    }
+}
+
+.required {
+    color: variables.$icon-bg-red;
+}
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: variables.$space-sm;
+    margin-bottom: variables.$space-lg;
+
+    input[type="checkbox"] {
+        appearance: none;
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        background-color: variables.$white;
+        border: variables.$border-grey 1px solid;
+        cursor: pointer;
+
+        &:checked {
+            background-color: variables.$btn-purple;
+            border-color: variables.$btn-purple;
+        }
+    }
+
+    label {
+        margin-bottom: 0;
+        font-size: .9375rem;
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    a {
+        color: variables.$dark-text;
+        text-decoration: underline;
+    }
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: variables.$space-sm;
+
+    @include mixins.mq("medium") {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn {
+        font-size: .9em;
+        padding: 12px 25px;
+    }
+}
+
+.fields-required {
+    color: variables.$text-grey;
+    font-size: .875rem;
+    margin: 0;
+}
+
+.contact-details {
+    min-width: 0;
+
+    @include mixins.mq("medium") {
+        flex: 0 1 calc((100% - #{variables.$space-lg}) / 3);
+    }
+
+    p {
+        color: variables.$dark-text;
+        font-size: .9375rem;
+        font-weight: 600;
+        margin: 0 0 variables.$space-md;
+    }
+
+    .contact-details-link {
+        display: inline-block;
+        color: variables.$btn-purple;
+        font-size: 1.625rem;
+        line-height: 1.1;
+        font-weight: 700;
+        text-decoration: none;
+        margin-bottom: variables.$space-xl;
+    }
+
+    .out-of-hours {
+        display: inline-flex;
+        align-items: center;
+        gap: variables.$space-xs;
+        color: variables.$dark-text;
+        font-size: .9375rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        // icon fonts ship a single weight, so thicken the glyph with a stroke
+
+        .icon-chevron-down {
+            font-size: 1rem;
+            -webkit-text-stroke: 1px currentColor;
+        }
+    }
+}

@@ -97,7 +97,64 @@
             </div>
         </div>
     </div>
-    <?php 
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">Your Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="telephone">Your Telephone Number <span class="required">*</span></label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-consent">
+                            <input type="checkbox" id="marketing" name="marketing">
+                            <label for="marketing">Please tick this box if you wish to receive marketing information from us.
+                                Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data
+                                safe.</label>
+                        </div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-dark-grey">Send Enquiry</button>
+                            <p class="fields-required"><span class="required">*</span> Fields Required</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <p>Email us on:</p>
+                    <a class="contact-details-link" href="mailto:sales@netmatters.com">sales@netmatters.com</a>
+                    <p>Speak to Sales on:</p>
+                    <a class="contact-details-link" href="tel:01603515007">01603 515007</a>
+                    <p>Business hours:</p>
+                    <p>Monday - Friday 07:00 - 18:00</p>
+                    <a class="out-of-hours" href="#">Out of Hours IT Support
+                        <span class="icon-chevron-down"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
 
     require('partials/cookies.php');
     require('partials/footer.php');

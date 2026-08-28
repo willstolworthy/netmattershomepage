@@ -331,7 +331,7 @@ template {
 }
 
 .icon-x:before {
-  content: "\e901";
+  content: "\e913";
 }
 
 .icon-instagram:before {
@@ -348,23 +348,23 @@ template {
 }
 
 .icon-cogs:before {
-  content: "\e906";
+  content: "\e918";
 }
 
 .icon-bar-graph:before {
-  content: "\e904";
+  content: "\e916";
 }
 
 .icon-security:before {
-  content: "\e905";
+  content: "\e917";
 }
 
 .icon-school:before {
-  content: "\e902";
+  content: "\e914";
 }
 
 .icon-phone_in_talk:before {
-  content: "\e903";
+  content: "\e915";
 }
 
 .icon-display:before {
@@ -380,27 +380,27 @@ template {
 }
 
 .icon-handshake-o:before {
-  content: "\e90d";
+  content: "\e91f";
 }
 
 .icon-cloud-download:before {
-  content: "\e90b";
+  content: "\e91d";
 }
 
 .icon-download:before {
-  content: "\e908";
+  content: "\e91a";
 }
 
 .icon-briefcase:before {
-  content: "\e909";
+  content: "\e91b";
 }
 
 .icon-laptop_mac:before {
-  content: "\e90c";
+  content: "\e91e";
 }
 
 .icon-group:before {
-  content: "\e90a";
+  content: "\e91c";
 }
 
 .icon-mobile:before {
@@ -412,7 +412,7 @@ template {
 }
 
 .icon-folder-open:before {
-  content: "\e930";
+  content: "\e932";
 }
 
 .icon-earth:before {
@@ -420,31 +420,31 @@ template {
 }
 
 .icon-transfer:before {
-  content: "\e907";
+  content: "\e919";
 }
 
 .icon-headphones:before {
-  content: "\e911";
+  content: "\e923";
 }
 
 .icon-hard-drive:before {
-  content: "\e90e";
+  content: "\e920";
 }
 
 .icon-dollar:before {
-  content: "\e90f";
+  content: "\e921";
 }
 
 .icon-email:before {
-  content: "\e910";
+  content: "\e922";
 }
 
 .icon-create:before {
-  content: "\e913";
+  content: "\e925";
 }
 
 .icon-line-chart:before {
-  content: "\e912";
+  content: "\e924";
 }
 
 .icon-search:before {
@@ -452,7 +452,7 @@ template {
 }
 
 .icon-phone:before {
-  content: "\e914";
+  content: "\e926";
 }
 
 .icon-ticket:before {
@@ -460,31 +460,31 @@ template {
 }
 
 .icon-dashboard:before {
-  content: "\e915";
+  content: "\e927";
 }
 
 .icon-phone1:before {
-  content: "\e916";
+  content: "\e904";
 }
 
 .icon-bullhorn:before {
-  content: "\e91d";
+  content: "\e92f";
 }
 
 .icon-local_grocery_store:before {
-  content: "\e917";
+  content: "\e929";
 }
 
 .icon-https:before {
-  content: "\e919";
+  content: "\e92b";
 }
 
 .icon-access_time:before {
-  content: "\e918";
+  content: "\e92a";
 }
 
 .icon-files-empty:before {
-  content: "\e925";
+  content: "\e931";
 }
 
 .icon-lab:before {
@@ -492,22 +492,26 @@ template {
 }
 
 .icon-help:before {
-  content: "\e91a";
+  content: "\e92c";
 }
 
 .icon-paperplane:before {
-  content: "\e91c";
+  content: "\e92e";
 }
 
 .icon-mouse:before {
-  content: "\e91b";
+  content: "\e92d";
 }
 
 .icon-minus:before {
-  content: "\e91e";
+  content: "\e90e";
 }
 
 .icon-chevrons-right:before {
+  content: "\e908";
+}
+
+.icon-chevron-down:before {
   content: "\e900";
 }
 
@@ -2624,6 +2628,186 @@ body.sidebar-open .sidebar-overlay {
   font-size: 0.95rem;
   font-weight: 600;
   color: #333645;
+}
+
+.contact {
+  margin-bottom: 50px;
+}
+.contact .row {
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .contact .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.contact-form {
+  min-width: 0;
+  background-color: #e9e9e9;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .contact-form {
+    flex: 0 1 calc((100% - 30px) * 2 / 3);
+  }
+}
+.contact-form label {
+  display: block;
+  color: #333645;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form input[type=tel],
+.contact-form textarea {
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 0.875rem;
+  background-color: #fff;
+  border: #ccc 1px solid;
+  border-radius: 0;
+}
+.contact-form input[type=text]:focus,
+.contact-form input[type=email]:focus,
+.contact-form input[type=tel]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: #5bc0de 1px solid;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form input[type=tel] {
+  height: 44px;
+}
+.contact-form textarea {
+  height: 110px;
+  padding-top: 10px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0 20px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+  }
+}
+
+.form-field {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .form-field {
+    margin-bottom: 0;
+  }
+}
+
+.required {
+  color: #d64541;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.form-consent input[type=checkbox] {
+  appearance: none;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  background-color: #fff;
+  border: #ccc 1px solid;
+  cursor: pointer;
+}
+.form-consent input[type=checkbox]:checked {
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.form-consent label {
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 2;
+}
+.form-consent a {
+  color: #333645;
+  text-decoration: underline;
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  .form-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.form-footer .btn {
+  font-size: 0.9em;
+  padding: 12px 25px;
+}
+
+.fields-required {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.contact-details {
+  min-width: 0;
+}
+@media (min-width: 768px) {
+  .contact-details {
+    flex: 0 1 calc((100% - 30px) / 3);
+  }
+}
+.contact-details p {
+  color: #333645;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+.contact-details .contact-details-link {
+  display: inline-block;
+  color: #926fb1;
+  font-size: 1.625rem;
+  line-height: 1.1;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+.contact-details .out-of-hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #333645;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-details .out-of-hours .icon-chevron-down {
+  font-size: 1rem;
+  -webkit-text-stroke: 1px currentColor;
 }
 
 /*# sourceMappingURL=style.css.map */
