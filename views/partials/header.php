@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="nm-header-logo">
-                    <a class="header-logo" href="#">
+                    <a class="header-logo" href="index.php">
                         <img src="img/logo.png" alt="Netmatters Logo">
                     </a>
                 </div>
@@ -14,7 +14,7 @@
                                 <span class="icon icon-mouse"></span>
                                 Support
                             </a>
-                            <a href="#" class="btn btn-grey">
+                            <a href="contact-us.php" class="btn btn-grey">
                                 <span class="icon icon-paperplane"></span>
                                 Contact
                             </a>

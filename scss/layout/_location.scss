@@ -1,0 +1,33 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+
+.location-bar {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    padding: 14px 0 13px;
+}
+
+.location-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        font-size: .8125rem;
+        color: #333645;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: #333645;
+        font-size: .8125rem;        
+    }
+}

@@ -1,0 +1,142 @@
+@use '../utilities/mixins';
+@use '../utilities/variables';
+@use 'sass:map';
+
+.offices {
+    .section-gap {
+        padding-top: 50px;
+    }
+    margin-bottom: 50px;
+}
+
+.offices-title {
+    h1 {
+        line-height: 1.1;
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin: 0 0 28px;
+        color: #333645;
+        margin-bottom: 80px;
+    }
+}
+
+.office-card {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    box-shadow: variables.$box-shadow;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.office {
+    .row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: variables.$space-sm;
+
+        @include mixins.mq("medium") {
+            flex-direction: row;
+            gap: 0 variables.$space-lg;
+        }
+    }
+
+    .btn {
+        font-size: 1rem;
+        height: 35px;
+        line-height: 35px;
+        margin-top: 15px;
+        font-size: .9em;
+        padding: 5px 30px;
+        box-sizing: content-box;
+        border-radius: 3px;
+    }
+}
+
+.office-img {
+    position: relative;
+
+    a {
+        display: block;
+    }
+}
+
+.office-category {
+    position: absolute;
+    top: variables.$space-xs;
+    right: 0;
+    padding: 0.1875rem variables.$space-xs;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: variables.$news-title-grey;
+    cursor: pointer;
+    z-index: map.get(variables.$z-index, 'overlay');
+}
+
+.office-text {
+    border-left: 1px solid variables.$border-grey;
+    border-right: 1px solid variables.$border-grey;
+    border-bottom: 1px solid variables.$border-grey;
+    margin-top: 0;
+    padding: 30px;
+
+    h2 {
+        color: #333645;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+
+        a {
+            color: inherit;
+        }
+
+        .icon-arrow-right2 {
+            font-weight: normal;
+        }
+    }
+
+    p {
+        color: variables.$text-grey;
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    color: variables.$text-grey;
+    font-size: 0.875rem;
+
+    .office-phone-number {
+        color: #926fb1!important;
+        font-size: 1.625rem;
+        line-height: 1.1;
+        font-weight: 700;
+    }
+
+    .phone-img img {
+        border-radius: 50%;
+    }
+
+    .phone-info {
+        padding-left: variables.$space-md;
+    }
+
+    b {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: variables.$dark-text;
+    }
+}
