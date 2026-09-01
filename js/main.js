@@ -16,14 +16,14 @@ $(document).ready(function(){
     $('.partners, .clients').slick({
         infinite: true,
         speed: 600,
-        variableWidth: true, // sizes each slide to its own logo so the gaps stay even
+        variableWidth: true, // gaps stay even
         slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2800, // waits between each slide instead of scrolling non stop
         arrows: false,
         dots: false,
-        pauseOnHover: true, // so the labels can be read
+        pauseOnHover: true,
         swipe: false,
         draggable: false,
         responsive: [ // breakpoints
@@ -68,6 +68,26 @@ $(document).ready(function(){
         }
 
         lastScroll = current;
+    });
+
+    // out of hours accordion
+    var $oohToggle = $('.out-of-hours');
+    var $oohPanel = $('.out-of-hours-panel');
+
+    function openOutOfHours(open) {
+        $oohToggle.toggleClass('out-of-hours-open', open).attr('aria-expanded', open);
+        $oohPanel.css('max-height', open ? $oohPanel[0].scrollHeight + 'px' : 0);
+    }
+
+    $oohToggle.on('click', function(e){
+        e.preventDefault();
+        openOutOfHours(!$oohToggle.hasClass('out-of-hours-open'));
+    });
+
+    $(window).on('resize', function(){
+        if ($oohToggle.hasClass('out-of-hours-open')) {
+            openOutOfHours(true);
+        }
     });
 
     // cookies popup

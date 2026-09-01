@@ -2641,12 +2641,14 @@ body.sidebar-open .sidebar-overlay {
   .contact .row {
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: flex-start;
   }
 }
 
 .contact-form {
   min-width: 0;
   background-color: #e9e9e9;
+  border-radius: 20px;
   padding: 30px;
 }
 @media (min-width: 768px) {
@@ -2810,6 +2812,21 @@ body.sidebar-open .sidebar-overlay {
 .contact-details .out-of-hours .icon-chevron-down {
   font-size: 1rem;
   -webkit-text-stroke: 1px currentColor;
+}
+.contact-details .out-of-hours-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.contact-details .out-of-hours-panel p {
+  color: #666;
+  font-weight: 400;
+  line-height: 2;
+  margin: 25px 0 0;
+}
+.contact-details .out-of-hours-panel .out-of-hours-times {
+  color: #333645;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
