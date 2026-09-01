@@ -154,21 +154,24 @@
         flex: 0 1 calc((100% - #{variables.$space-lg}) / 3);
     }
 
+    // every item sits on the same rhythm: a 30px line box plus a 25px gap
+
     p {
         color: variables.$dark-text;
-        font-size: .9375rem;
+        font-size: 1rem;
+        line-height: 30px;
         font-weight: 600;
-        margin: 0 0 variables.$space-md;
+        margin: 0 0 25px;
     }
 
     .contact-details-link {
         display: inline-block;
         color: variables.$btn-purple;
         font-size: 1.625rem;
-        line-height: 1.1;
-        font-weight: 700;
+        line-height: 30px;
+        font-weight: 600;
         text-decoration: none;
-        margin-bottom: variables.$space-xl;
+        margin-bottom: 25px;
     }
 
     .out-of-hours {
@@ -176,15 +179,14 @@
         align-items: center;
         gap: variables.$space-xs;
         color: variables.$dark-text;
-        font-size: .9375rem;
+        font-size: 1rem;
+        line-height: 30px;
         font-weight: 600;
         text-decoration: none;
 
-        // icon fonts ship a single weight, so thicken the glyph with a stroke
-
         .icon-chevron-down {
             font-size: 1rem;
-            -webkit-text-stroke: 1px currentColor;
+            -webkit-text-stroke: 1px currentColor; // thicker icon
         }
     }
 }

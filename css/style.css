@@ -2783,25 +2783,27 @@ body.sidebar-open .sidebar-overlay {
 }
 .contact-details p {
   color: #333645;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  line-height: 30px;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 .contact-details .contact-details-link {
   display: inline-block;
   color: #926fb1;
   font-size: 1.625rem;
-  line-height: 1.1;
-  font-weight: 700;
+  line-height: 30px;
+  font-weight: 600;
   text-decoration: none;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .contact-details .out-of-hours {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   color: #333645;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  line-height: 30px;
   font-weight: 600;
   text-decoration: none;
 }
