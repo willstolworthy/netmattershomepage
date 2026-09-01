@@ -285,69 +285,29 @@
         <div class="container">
             <div class="news">
                 <div class="row">
-                    <div class="news-card news1">
-                        <a class="news-link" href="#"></a>
-                        <div class="news-img">
-                            <a class="news-category" href="#">Insights</a>
-                            <img src="img/news-bespoke-software.png" alt="Increase Exit Value With Bespoke Software">
-                        </div>
-                        <div class="news-text">
-                            <h3>How Much Could Bespoke Software Add to Your E...</h3>
-                            <p>If you’re a Managing Director or Senior Manager preparing your business for exit, you know that incr...</p>
-                            <a class="btn btn-yellow" href="#">Read More</a>
-                            <div class="author">
-                                <div class="author-img">
-                                    <img src="img/author-nm.png" alt="Netmatters Logo">
-                                </div>
-                                <div class="author-info">
-                                    <b>Posted by Netmatters</b>
-                                    <br>27th June 2025
+                    <?php foreach ($posts as $i => $post): ?>
+                        <div class="news-card news<?= $i + 1 ?>">
+                            <a class="news-link" href="#"></a>
+                            <div class="news-img">
+                                <a class="news-category" href="#"><?= htmlspecialchars($post['category']) ?></a>
+                                <img src="img/<?= htmlspecialchars($post['image']) ?>" alt="<?= htmlspecialchars($post['title']) ?>">
+                            </div>
+                            <div class="news-text">
+                                <h3><?= htmlspecialchars($post['title']) ?></h3>
+                                <p><?= htmlspecialchars($post['excerpt']) ?></p>
+                                <a class="btn <?= $i === 2 ? 'btn-blue' : 'btn-yellow' ?>" href="#">Read More</a>
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="img/<?= htmlspecialchars($post['author_img']) ?>" alt="<?= htmlspecialchars($post['author_name']) ?>">
+                                    </div>
+                                    <div class="author-info">
+                                        <b>Posted by <?= htmlspecialchars($post['author_name']) ?></b>
+                                        <br><?= date('jS F Y', strtotime($post['posted_on'])) ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="news-card news2">
-                        <a class="news-link" href="#"></a>
-                        <div class="news-img">
-                            <a class="news-category" href="#">Insights</a>
-                            <img src="img/news-ai-integration.png" alt="How Can AI Benefit My Business?">
-                        </div>
-                        <div class="news-text">
-                            <h3>How Can AI Benefit My Business?</h3>
-                            <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
-                            <a class="btn btn-yellow" href="#">Read More</a>
-                            <div class="author">
-                                <div class="author-img">
-                                    <img src="img/author-nm.png" alt="Netmatters Logo">
-                                </div>
-                                <div class="author-info">
-                                    <b>Posted by Netmatters</b>
-                                    <br>26th June 2025
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card news3">
-                        <a class="news-link" href="#"></a>
-                        <div class="news-img">
-                            <a class="news-category" href="#">Insights</a>
-                            <img src="img/news-first-line.png" alt="1st Line Technician">
-                        </div>
-                        <div class="news-text">
-                            <h3>1st Line Technician</h3>
-                            <p>Salary Range £25,000 -£29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
-                            <a class="btn btn-blue" href="#">Read More</a>
-                            <div class="author">
-                                <div class="author-img">
-                                    <img src="img/author-bethany.jpeg" alt="Bethany Shakespeare">
-                                </div>
-                                <div class="author-info">
-                                    <b>Posted by Bethany Shakespeare</b>
-                                    <br>20th June 2025
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
