@@ -13,8 +13,6 @@ $errors = [];
 $old = array_fill_keys($fields, '');
 $old['marketing'] = false;
 
-$sent = isset($_GET['sent']);
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // keep what was typed so the form can be filled back in if anything fails
@@ -72,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         // redirect so refreshing the page can't send the same enquiry twice
-        header('Location: /contact-us?sent=1');
+        header('Location: /');
         exit;
     }
 }

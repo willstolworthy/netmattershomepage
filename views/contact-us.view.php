@@ -101,9 +101,6 @@
         <div class="container">
             <div class="row">
                 <div class="contact-form">
-                    <?php if ($sent): ?>
-                        <p class="form-success">Thanks for getting in touch. We'll be in contact shortly.</p>
-                    <?php endif; ?>
                     <form action="/contact-us" method="post" novalidate>
                         <div class="form-row">
                             <div class="form-field">
