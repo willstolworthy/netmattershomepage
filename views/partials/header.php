@@ -14,7 +14,7 @@
                                 <span class="icon icon-mouse"></span>
                                 Support
                             </a>
-                            <a href="contact-us.php" class="btn btn-grey">
+                            <a href="contact-us" class="btn btn-grey">
                                 <span class="icon icon-paperplane"></span>
                                 Contact
                             </a>

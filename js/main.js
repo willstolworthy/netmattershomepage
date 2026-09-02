@@ -115,4 +115,74 @@ $(document).ready(function(){
     $('.cookies-settings').on('click', function(){
         $cookies.removeClass('cookies-open');
     });
+
+    // contact form validation
+    // the form is marked novalidate
+
+    var $contactForm = $('.contact-form form');
+
+    var emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    // uk numbers
+    var phonePattern = /^(?:\+44|0)\d{9,10}$/;
+
+    // one entry per field that needs checking, true when the value is ok
+    // the patterns reject an empty string so they cover the required check too
+    var validators = {
+        name: function(value){
+            return value !== '';
+        },
+        email: function(value){
+            return emailPattern.test(value);
+        },
+        telephone: function(value){
+            return phonePattern.test(value.replace(/[\s().-]/g, ''));
+        },
+        message: function(value){
+            return value !== '';
+        },
+    };
+
+    function fieldByName(name) {
+        return $contactForm.find('[name="' + name + '"]');
+    }
+
+    function validateField($field) {
+        var check = validators[$field.attr('name')];
+        if (!check) return true;
+
+        var valid = check($.trim($field.val()));
+
+        $field.toggleClass('form-field-invalid', !valid).attr('aria-invalid', !valid);
+
+        // drop any message php left behind once the field is fixed
+        if (valid) {
+            $field.closest('.form-field').find('.form-error').remove();
+        }
+
+        return valid;
+    }
+
+    $contactForm.on('submit', function(e){
+        var $invalid = $();
+
+        $.each(validators, function(name){
+            var $field = fieldByName(name);
+            if (!validateField($field)) {
+                $invalid = $invalid.add($field);
+            }
+        });
+
+        if ($invalid.length) {
+            e.preventDefault();
+            $invalid.first().trigger('focus');
+        }
+    });
+
+    // only recheck a field that has already failed
+    $contactForm.on('input focusout', '[name]', function(){
+        var $field = $(this);
+        if ($field.hasClass('form-field-invalid')) {
+            validateField($field);
+        }
+    });
 });

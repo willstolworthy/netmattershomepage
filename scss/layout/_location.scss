@@ -2,8 +2,13 @@
 @use '../utilities/variables';
 
 .location-bar {
+    display: none;
     box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
     padding: 14px 0 13px;
+
+    @include mixins.mq("medium") {
+        display: block;
+    }
 }
 
 .location-bar-content {

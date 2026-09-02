@@ -4,19 +4,40 @@
 
 .offices {
     .section-gap {
-        padding-top: 50px;
+        padding-top: 0;
+
+        @include mixins.mq("medium") {
+            padding-top: 50px;
+        }
     }
     margin-bottom: 50px;
 }
 
+// on mobile the title sits straight under the header as a full width dark band,
+// breaking out of the container with negative margins
+
 .offices-title {
+    background-color: variables.$main-bg;
+    margin: 0 (-(variables.$space-sm)) variables.$space-xxl;
+    padding: variables.$space-lg variables.$space-sm;
+
+    @include mixins.mq("medium") {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
     h1 {
         line-height: 1.1;
         font-size: 2.25rem;
         font-weight: 400;
-        margin: 0 0 28px;
-        color: #333645;
-        margin-bottom: 80px;
+        margin: 0;
+        color: variables.$white;
+
+        @include mixins.mq("medium") {
+            margin: 0 0 80px;
+            color: variables.$dark-text;
+        }
     }
 }
 
@@ -39,7 +60,7 @@
     .row {
         align-items: flex-start;
         flex-direction: column;
-        gap: variables.$space-sm;
+        gap: 60px;
 
         @include mixins.mq("medium") {
             flex-direction: row;

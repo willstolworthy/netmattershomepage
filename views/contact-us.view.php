@@ -101,41 +101,59 @@
         <div class="container">
             <div class="row">
                 <div class="contact-form">
-                    <form action="#" method="post">
+                    <?php if ($sent): ?>
+                        <p class="form-success">Thanks for getting in touch. We'll be in contact shortly.</p>
+                    <?php endif; ?>
+                    <form action="/contact-us" method="post" novalidate>
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="name">Your Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" value="<?= e($old['name']) ?>" class="<?= isset($errors['name']) ? 'form-field-invalid' : '' ?>" required>
+                                <?php if (isset($errors['name'])): ?>
+                                    <span class="form-error"><?= e($errors['name']) ?></span>
+                                <?php endif; ?>
                             </div>
                             <div class="form-field">
                                 <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
+                                <input type="text" id="company" name="company" value="<?= e($old['company']) ?>" class="<?= isset($errors['company']) ? 'form-field-invalid' : '' ?>">
+                                <?php if (isset($errors['company'])): ?>
+                                    <span class="form-error"><?= e($errors['company']) ?></span>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="email">Your Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" value="<?= e($old['email']) ?>" class="<?= isset($errors['email']) ? 'form-field-invalid' : '' ?>" required>
+                                <?php if (isset($errors['email'])): ?>
+                                    <span class="form-error"><?= e($errors['email']) ?></span>
+                                <?php endif; ?>
                             </div>
                             <div class="form-field">
                                 <label for="telephone">Your Telephone Number <span class="required">*</span></label>
-                                <input type="tel" id="telephone" name="telephone" required>
+                                <input type="tel" id="telephone" name="telephone" value="<?= e($old['telephone']) ?>" class="<?= isset($errors['telephone']) ? 'form-field-invalid' : '' ?>" required>
+                                <?php if (isset($errors['telephone'])): ?>
+                                    <span class="form-error"><?= e($errors['telephone']) ?></span>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="message">Message <span class="required">*</span></label>
-                                <textarea id="message" name="message" required></textarea>
+                                <textarea id="message" name="message" class="<?= isset($errors['message']) ? 'form-field-invalid' : '' ?>" required><?= e($old['message']) ?></textarea>
+                                <?php if (isset($errors['message'])): ?>
+                                    <span class="form-error"><?= e($errors['message']) ?></span>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="form-consent">
-                            <input type="checkbox" id="marketing" name="marketing">
+                            <input type="checkbox" id="marketing" name="marketing" <?= $old['marketing'] ? 'checked' : '' ?>>
                             <label for="marketing">Please tick this box if you wish to receive marketing information from us.
                                 Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data
                                 safe.</label>
                         </div>
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-dark-grey">Send Enquiry</button>
+                            <button type="submit" class="btn submit-btn">Send Enquiry</button>
                             <p class="fields-required"><span class="required">*</span> Fields Required</p>
                         </div>
                     </form>

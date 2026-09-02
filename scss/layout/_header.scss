@@ -257,22 +257,25 @@
         padding-bottom: 0px;
 
         .mobile-searchbar {
+            height: 44px;
             background-color: rgba(0, 0, 0, .1);
             border: 2px solid rgba(0,0,0,.1);
             border-right: none;
             border-radius: 2px 0 0 2px;
-            margin-right: -1px;
         }
 
         .btn-search {
+            display: flex;
+            align-items: center;
             margin: 0;
+            padding: 0 10px 0 25px;
             background-color: rgba(0, 0, 0, .1);
             border: 2px solid rgba(0,0,0,.1);
             border-left: none;
             color: variables.$dark-bg;
             font-size: 1.25rem;
             border-radius: 0 2px 2px 0;
-            height: 40px;
+            height: 44px;
         }
     }
 }

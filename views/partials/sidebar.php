@@ -2,7 +2,7 @@
 <aside class="sidebar">
     <div class="sidebar-services mobile-only">
         <div class="sidebar-mobile-button">
-            <a href="#">
+            <a href="contact-us">
                 Contact Us
             </a>
         </div>
