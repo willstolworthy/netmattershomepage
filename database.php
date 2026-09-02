@@ -6,7 +6,7 @@ Dotenv\Dotenv::createImmutable(__DIR__)->load();
 
 try {
     $pdo = new PDO(
-        "mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_NAME']};charset={$_ENV['DB_CHARSET']}",
+        "mysql:host={$_ENV['DB_HOST']};port={$_ENV['DB_PORT']};dbname={$_ENV['DB_NAME']};charset={$_ENV['DB_CHARSET']}",
         $_ENV['DB_USER'],
         $_ENV['DB_PASS'],
         [
@@ -16,6 +16,9 @@ try {
         ]
     );
 } catch (PDOException $e) {
+    error_log('DB connection failed: ' . $e->getMessage());
     http_response_code(500);
-    exit('Database unavailable.');
+    exit(($_ENV['APP_DEBUG'] ?? 'false') === 'true'
+        ? 'Database unavailable: ' . $e->getMessage()
+        : 'Database unavailable.');
 }
